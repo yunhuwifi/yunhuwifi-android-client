@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    >
+<GridView 
+    android:id="@+id/gv_menu"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:horizontalSpacing="14dp"
+    android:numColumns="2"
+    android:padding="5dp"
+    android:stretchMode="columnWidth"
+    android:verticalSpacing="14dp" 
+    />
+</LinearLayout>

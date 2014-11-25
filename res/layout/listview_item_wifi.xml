@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:padding="10dp"
+         android:background="@drawable/itembg"
+         android:descendantFocusability="blocksDescendants" 
+          >
+
+        <ImageView
+            android:id="@+id/ivwifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/checkedlist" 
+            />
+
+        <TextView
+            android:id="@+id/tvWifiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivwifi"
+            android:layout_marginLeft="15dp"
+            android:text="所连接的WiFi"
+            android:focusable="false"
+            android:textColor="@drawable/cancelfontcolor"
+            android:textSize="16sp" />
+
+        <ToggleButton
+            android:id="@+id/tgOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_butn_toggle"
+            android:checked="true"
+            android:focusable="false"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/testspeedbgicon" >
+
+    <LinearLayout
+        android:id="@+id/llyt"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+         >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+             >
+
+            <Button
+                android:id="@+id/btnback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:id="@+id/txtheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="体检测速"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_speed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llyt"
+        android:background="@drawable/bg_speed"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="#0055cd"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_white"
+                android:text="当前速度"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/now_speed"
+                style="@style/text_blue"
+                android:maxLength="6"
+                android:layout_marginTop="4.0dip" />
+        </LinearLayout>
+  <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+          />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:background="#0055cd"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_white"
+                android:text="平均速度"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/average_speed"
+                style="@style/text_blue"
+                android:layout_marginTop="4.0dip" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+             />
+
+        <LinearLayout
+            android:id="@+id/llyt_average_speed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="#0055cd"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_white"
+                android:text="最小值" />
+
+            <TextView
+                android:id="@+id/min_speed"
+                style="@style/text_blue"
+                android:layout_marginTop="4.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/aa"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lay_speed"
+        android:gravity="bottom" >
+
+        <ImageView
+            android:id="@+id/iv_tester"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:contentDescription="@null"
+            android:src="@drawable/bg_tester"
+            />
+
+        <ImageView
+            android:id="@+id/iv_needle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_heart"
+            android:layout_alignRight="@+id/iv_heart"
+            android:layout_marginBottom="12.0dip"
+            android:layout_marginRight="13.0dip"
+            android:layout_marginTop="8.0dip"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_needle" />
+
+        <ImageView
+            android:id="@id/iv_heart"
+            android:layout_width="26.0dip"
+            android:layout_height="26.0dip"
+            android:layout_alignBottom="@id/iv_tester"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11.0dip"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_heart" />
+
+
+    </RelativeLayout>
+    -->
+	<TextView 
+	    android:id="@+id/tvpbtxt"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/pbbg"
+	    android:textColor="@color/white"
+	    android:textSize="14sp"
+	    android:text="下载速度"
+	    android:gravity="center_vertical"
+	    android:background="@drawable/scaletxtbg"
+	    android:visibility="gone"
+        android:layout_alignParentLeft="true"
+	    />
+<LinearLayout 
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvpbtxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/scaleicon"
+        android:id="@+id/layscale"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+          android:visibility="gone"
+
+    >
+
+    <ProgressBar
+        android:id="@+id/horizontalPB"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:progressDrawable="@drawable/scalepbselector"
+        android:max="100"
+        android:progress="50" />
+
+</LinearLayout>
+    <LinearLayout 
+        android:id="@+id/pbbg"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/lay_speed"
+        android:layout_centerHorizontal="true" 
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circlebgicon"
+         android:gravity="center"
+          android:layout_marginBottom="40dp"
+        >
+
+    <com.yunhuwifi.view.CircleProgressBar
+        android:id="@+id/circlePB"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        />
+	</LinearLayout>
+    <TextView
+        android:id="@+id/tvunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pbbg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="te"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvmaxtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pbbg"
+        android:layout_centerHorizontal="true"
+        android:text="峰值"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvspeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvunit"
+        android:layout_centerHorizontal="true"
+        android:text="11"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgkedu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+        android:layout_below="@+id/layscale"
+        android:visibility="gone"
+        android:src="@drawable/kedu" />
+
+  <!--   <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pbbg"
+        android:layout_marginLeft="20dp" 
+        android:layout_marginRight="30dp" 
+        />
+
+    <TextView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pbbg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/scaleicon" />
+ -->
+
+    <Button
+        android:id="@+id/start_button"
+        style="@style/testButton"
+        android:layout_below="@+id/layscale"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="开始测速" />
+
+</RelativeLayout>

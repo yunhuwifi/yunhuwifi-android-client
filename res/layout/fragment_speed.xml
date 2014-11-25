@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical|center_horizontal" >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spaceavailablebg"
+            android:id="@+id/relativeLayout1"
+            >
+         
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" 
+                android:text="上网速度" />
+
+            <TextView
+                android:id="@+id/tvDownloadSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="265.3"
+                android:maxLength="6"
+                android:textSize="48sp" 
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvDownloadUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvDownloadSpeed"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" 
+                android:text="KB/s"
+                 />
+            
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/detector"
+            style="@style/speedButton"
+             android:layout_alignLeft="@+id/relativeLayout1"
+            android:layout_alignRight="@+id/relativeLayout1"
+          android:layout_margin="10dp"
+          android:gravity="center"
+            android:layout_below="@+id/relativeLayout1"
+            android:text="体检测速" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+          android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spaceavailablebg" >
+
+            <TextView
+                android:id="@+id/tvstorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:text="可用空间"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvUploadSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:maxLength="4"
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/tvUploadUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUploadSpeed"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="GB"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/storage"
+            style="@style/speedButton"
+            android:layout_alignLeft="@+id/relativeLayout2"
+            android:layout_alignRight="@+id/relativeLayout2"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="存储管理" />
+
+    </RelativeLayout>
+
+</LinearLayout>

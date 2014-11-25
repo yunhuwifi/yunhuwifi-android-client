@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     xmlns:tools="http://schemas.android.com/tools"
+     tools:context=".ChangeYunhuPwdActivity">
+
+ <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="20.0dp" >
+
+        
+        <com.yunhuwifi.view.PasswordEditText
+            android:id="@+id/oldpwd"
+            android:hint="原密码"
+            android:inputType="textPassword"
+            style="@style/normalEditText"
+            android:password="true"
+             />
+
+        <com.yunhuwifi.view.PasswordEditText
+            android:id="@+id/newpwd"
+            style="@style/normalEditText"
+            android:hint="新密码"
+             android:inputType="textPassword"
+            android:password="true"
+            android:layout_marginTop="10dp"
+          />
+
+        <Button
+            android:id="@+id/btnchangeuser"
+            android:layout_marginTop="10.0dp"
+            
+            style="@style/buttonPrimary"
+            android:text="修改"
+           />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+

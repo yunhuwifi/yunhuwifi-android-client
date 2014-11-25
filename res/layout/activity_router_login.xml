@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20.0dp" 
+     tools:context=".RouterBindActivity">
+
+    <com.yunhuwifi.view.PasswordEditText
+        android:id="@+id/txtPassword"
+        style="@style/normalEditText"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icon_lock"
+        android:ems="18"
+        android:hint="路由器管理密碼"
+        android:inputType="textPassword"
+        android:password="true"
+        android:drawablePadding="5dp"
+         />
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/buttonPrimary"
+        android:layout_marginTop="15.0dp"
+        android:text="登录"
+       >
+    </Button>
+
+</LinearLayout>

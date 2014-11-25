@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+  
+
+      <ListView
+        android:id="@+id/lvdownloaded"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#ffebebeb"
+        android:dividerHeight="1dp"
+        android:layout_weight="10"
+        android:cacheColorHint="@android:color/transparent"
+        >
+    </ListView>
+
+      <LinearLayout
+          android:id="@+id/layopreatedel"
+          android:layout_width="fill_parent"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:layout_gravity="bottom"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:background="@drawable/operationbg"
+          android:visibility="gone"
+          >
+          <Button 
+              style="@style/bottomoperate"
+              android:drawableTop="@drawable/operatedelbg"
+              android:text="删除"
+              android:id="@+id/btndel"
+              />
+      </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+    
+    
+    <ShareSDK 
+        
+        AppKey = "2ad11dac4040"/> 
+ 
+    <SinaWeibo
+       Id="1"
+        SortId="1"
+        AppKey="568898243"
+        AppSecret="38a4f8204cc784f81f9f0daaf31e02e3"
+        RedirectUrl="http://roccipowerbank.cn.china.cn/"
+        ShareByAppClient="true"
+        Enable="true" />
+
+    <QZone
+        Id="3"
+        SortId="3"
+        AppId="100371282"
+        AppKey="aed9b0303e3ed1e27bae87c33761161d"
+        ShortLinkConversationEnable="true"
+        Enable="true" />
+    <Renren
+        Id="10"
+        SortId="10"
+      AppId="270894"
+        ApiKey="e07e0657ae9042059caa5e5d36363bba"
+        SecretKey="279d3a62d3364e76a36db7ec5c655831"
+        ShortLinkConversationEnable="true"
+        Enable="true" />
+
+</DevInfor>

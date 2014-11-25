@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".BlackListActivity" >
+
+   <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+<com.yunhuwifi.view.PullDownListView 
+    android:id="@+id/pullBlackList"
+     android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+        <ListView
+            android:id="@+id/lvBlackList"
+            android:divider="#ffebebeb"
+        	android:dividerHeight="1dp"
+        	android:cacheColorHint="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+        </com.yunhuwifi.view.PullDownListView>
+    </LinearLayout>
+</LinearLayout>

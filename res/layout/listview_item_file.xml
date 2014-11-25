@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+           <RelativeLayout
+		          android:padding="10dip"
+		          android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+				android:background="@drawable/itembg"
+	                  android:descendantFocusability="blocksDescendants" 
+		          >
+
+		          <LinearLayout
+		              android:layout_width="match_parent"
+		              android:layout_height="wrap_content"
+		              android:layout_toLeftOf="@+id/ivnext"
+		              android:layout_toRightOf="@+id/ivfile"
+		              android:orientation="vertical"
+		              android:layout_marginLeft="8dip"
+		              android:layout_marginRight="8dip"
+		              android:layout_centerVertical="true"
+		               >
+
+					          <TextView
+					              android:id="@+id/tvFileTitle"
+					              android:layout_width="wrap_content"
+				              	  android:layout_height="fill_parent"
+				              	  android:layout_weight="1"
+				              	  android:padding="2dip"
+				              	   android:focusable="false"
+				              	  android:textColor="@drawable/cancelfontcolor"
+				              	  style="@style/text_large"
+				              	  android:gravity="center"
+				              	  android:text="t"
+					              />
+					            <LinearLayout
+		              android:layout_width="match_parent"
+		              android:layout_height="wrap_content"
+		              android:orientation="horizontal"
+		              android:layout_weight="1">
+					          <TextView
+					              android:id="@+id/tvFileSize"
+					              android:layout_width="wrap_content"
+					              android:layout_height="wrap_content"
+					               style="@style/text_small"
+					               android:text="t"
+					               />
+					          <TextView
+					              android:id="@+id/tvFileTime"
+					              android:layout_width="wrap_content"
+					              android:layout_height="wrap_content"
+					               style="@style/text_small"
+					               android:text="2014-11-22"
+					               android:layout_marginLeft="20dp"
+					              />
+					          </LinearLayout>
+		          </LinearLayout>
+ 					
+ 					<CheckBox
+			              android:id="@+id/cbFile"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"
+			              android:layout_alignParentRight="true"
+			               android:layout_centerVertical="true"
+			              android:focusable="false"
+			              android:layout_marginRight="15dp"
+			              android:visibility="gone"
+			              style="@style/checkboxtheme" />
+		          
+
+
+		          <ImageView
+		              android:id="@+id/ivfile"
+		              android:layout_width="wrap_content"
+		              android:layout_height="wrap_content"
+		              android:layout_alignParentLeft="true"
+		              android:layout_centerVertical="true"
+		              android:scaleType="fitXY"
+		              android:src="@drawable/launcher"
+		              />
+
+		      </RelativeLayout>   
+		      
+</LinearLayout>

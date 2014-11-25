@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weibo_oauth_regiseter">Authorization</string>
+    <string name="weibo_upload_content">分享图片</string>
+    <string name="wechat_client_inavailable">Wechat client not exists or the version is too low</string>
+    <string name="google_plus_client_inavailable">Google+ client not exists or the version is too low</string>
+    <string name="qq_client_inavailable">Mobile QQ client not exists or the version is too low</string>
+    <string name="pinterest_client_inavailable">Pinterest client not exists or the version is too low</string>
+    <string name="instagram_client_inavailable">Instagram client not exists or the version is too low</string>
+    
+	<string name="sinaweibo">Sina Weibo</string>
+	<string name="qzone">QQ</string>
+	<string name="renren">Renren</string>
+	<string name="qq">QQ</string>
+</resources>

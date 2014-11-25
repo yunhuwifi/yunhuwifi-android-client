@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".BaiduLoginActivity" >
+
+    <LinearLayout 
+        android:id="@+id/layheader"
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        >
+        <include  layout="@layout/baiduloginheader"/>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/laybody"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <com.yunhuwifi.view.PasswordEditText
+            android:id="@+id/tvbaidupwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvbaiduuser"
+            android:layout_below="@+id/tvbaiduuser"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/baiduinputbox"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/baidueye"
+            android:drawableLeft="@drawable/baidupwd"
+            android:ems="18"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:password="true"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnbaidu"
+            style="@style/buttonbaidu"
+            android:layout_alignLeft="@+id/tvbaidupwd"
+            android:layout_below="@+id/tvbaidupwd"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="登录" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvvist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnbaidu"
+            android:layout_below="@+id/btnbaidu"
+            android:text="@string/visit" />
+        <!-- <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvvist"
+            android:layout_below="@+id/tvvist"
+            android:background="@drawable/listviewbgnormal"
+            android:text="CheckBox1" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkBox1"
+            android:layout_below="@+id/checkBox1"
+            android:layout_marginTop="30dp"
+            android:text="TextView" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="21dp"
+            android:text="CheckBox" /> -->
+
+		  <LinearLayout
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_alignParentLeft="true"
+		      android:layout_below="@+id/tvvist"
+		      android:layout_marginTop="10dp"
+		      android:orientation="vertical" >
+
+		      <RelativeLayout
+		          android:id="@+id/layqx"
+		          android:layout_width="fill_parent"
+		          android:layout_height="wrap_content"
+		          android:padding="5dp"
+		          android:layout_marginRight="10dp"
+		          android:layout_marginLeft="10dp"
+		          android:background="@drawable/baidufirstselect" >
+
+		          <CheckBox
+		              android:layout_width="wrap_content"
+		              android:layout_height="wrap_content"
+		              android:text="访问您的个人资料等基础信息"
+		               android:layout_centerVertical="true"
+		              android:textColor="#333"
+		              android:button="@drawable/baidunormalchecked"
+		              android:clickable="false"
+		              android:textSize="17sp" />
+
+		       
+		      </RelativeLayout>
+
+		      <RelativeLayout
+		          android:layout_width="fill_parent"
+		          android:layout_height="wrap_content"
+		          android:padding="5dp"
+		            android:layout_marginRight="10dp"
+		          android:layout_marginLeft="10dp"
+		          android:background="@drawable/baidusecondselect"
+		         >
+
+		          <CheckBox
+		              android:layout_width="wrap_content"
+		              android:layout_height="wrap_content"
+		              android:layout_centerVertical="true"
+		              android:text="在您的百度云创建文件夹并读写数据"
+		              style="@style/baiducheckbox"
+		              android:checked="true"
+		              android:textColor="#333"
+		              android:textSize="17sp" />
+
+		          
+		      </RelativeLayout>
+		  </LinearLayout>
+
+		  <com.yunhuwifi.view.ClearEditText
+		      android:id="@+id/tvbaiduuser"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_alignParentTop="true"
+		      android:layout_centerHorizontal="true"
+		      android:layout_margin="10dp"
+		      android:background="@drawable/baiduinputbox"
+		      android:drawablePadding="5dp"
+		      android:drawableLeft="@drawable/baiduuser"
+		      android:ems="11"
+		      android:hint="手机号"
+		      android:inputType="textEmailAddress"
+		      android:padding="10dp"
+		      android:singleLine="true" />
+
+            </RelativeLayout>
+</LinearLayout>

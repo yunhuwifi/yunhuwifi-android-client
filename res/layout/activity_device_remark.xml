@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     xmlns:tools="http://schemas.android.com/tools"
+     tools:context=".DeviceRemarkActivity">
+
+    <com.yunhuwifi.view.ClearEditText
+        android:id="@+id/txtRemark"
+        style="@style/normalEditText"
+        android:layout_margin="10dp"
+        android:hint="备注名"
+        android:inputType="textEmailAddress"
+       />
+
+    <Button
+        android:id="@+id/btnComplete"
+        android:layout_margin="10dp"
+        style="@style/buttonPrimary"
+        android:text="完成"
+       />
+
+</LinearLayout>

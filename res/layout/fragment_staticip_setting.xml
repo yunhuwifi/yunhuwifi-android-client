@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_cart_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+<!-- android:background="#ffefebe7"  -->
+
+    <ScrollView  
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="60.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="10.0dip" >
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="4.0dip"
+                android:text="使用下面的地址"
+                android:textColor="@color/black"
+                android:textSize="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_bg"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+
+                    <TableRow
+                        android:id="@+id/more_page_row1"
+                        android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                        >
+                        <EditText
+                            android:id="@+id/ipaddr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/listviewbgnormal"
+                            android:gravity="center_vertical"
+                            android:hint="ip地址"
+                            android:layout_margin="10dp"
+                            android:padding="5dp" >
+                        </EditText>
+                    </TableRow>
+
+                    <View 
+                         android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/shape_line"
+                        />
+
+                    <TableRow
+                        android:id="@+id/more_page_row2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+						<EditText
+						    android:id="@+id/netmask"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/listviewbgnormal"
+                            android:gravity="center_vertical"
+                            android:hint="子网掩码"
+                            android:layout_margin="10dp"
+                            android:padding="5dp" >
+                        </EditText>
+                    </TableRow>
+
+                    <View 
+                         android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/shape_line"
+                        />
+
+                    <TableRow
+                        android:id="@+id/more_page_row3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+						<EditText
+						    android:id="@+id/gwaddr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/listviewbgnormal"
+                            android:gravity="center_vertical"
+                            android:hint="默认网关"
+                            android:layout_margin="10dp"
+                            android:padding="5dp" >
+                        </EditText>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnDNS"
+                android:layout_margin="10dp"
+                android:layout_gravity="right"
+                android:padding="5dp"
+                android:text="自定义DNS"
+                style="@style/regButton"
+                 />
+
+            <Button
+                android:id="@+id/btnstaticip"
+                android:layout_marginTop="20dp"
+                style="@style/buttonPrimary"
+                android:text="确定" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

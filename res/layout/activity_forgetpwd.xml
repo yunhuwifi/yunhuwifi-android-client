@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#ffffff" 
+    android:orientation="vertical" 
+     xmlns:tools="http://schemas.android.com/tools"
+     tools:context=".ForgetPwdActivity">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <include layout="@layout/header" />
+    </LinearLayout>
+<RelativeLayout
+            android:id="@+id/login_div"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:background="@drawable/background_login_div_bg"
+            android:padding="15dip" >
+
+            <TextView
+                android:id="@+id/user"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="手机号" />
+
+		<com.yunhuwifi.view.ClearEditText
+            android:id="@+id/number"
+            style="@style/normalEditText"
+            android:drawableLeft="@drawable/icon_phone"
+            android:hint="请输入手机号"
+            android:layout_below="@id/user"
+            android:inputType="phone"
+            android:maxLength="11" />
+            <TextView
+                android:id="@+id/txtcaptcha"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number"
+                android:layout_marginTop="10dp"
+                android:text="验证码" />
+
+            <EditText
+                android:id="@+id/captcha"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtcaptcha"
+                android:background="@drawable/listviewbgnormal"
+                android:hint="验证码"
+                android:padding="5dp"
+                android:maxLength="6"
+                android:password="true"
+                android:singleLine="true" />
+
+			<Button
+			    android:id="@+id/backpwd"
+			   style="@style/buttonPrimary"
+			    android:layout_below="@+id/captcha"
+			    android:layout_marginTop="26dp"
+			    android:text="找回密码" />
+
+			<Button
+			    android:id="@+id/txtchange"
+			    android:layout_width="80dp"
+			    android:layout_height="wrap_content"
+			    android:layout_alignRight="@+id/number"
+			    android:layout_alignTop="@+id/captcha"
+			    android:background="@drawable/btnbg"
+			    android:gravity="center"
+			    android:layout_marginRight="10dp"
+			    android:text="获取手机\n验证码"
+			    android:textSize="14dp"
+			    android:textColor="@color/white" />
+
+</RelativeLayout>
+</LinearLayout>

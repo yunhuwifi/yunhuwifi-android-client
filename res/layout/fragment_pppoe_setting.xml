@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     android:background="@color/white"
+    >
+
+<LinearLayout 
+	android:orientation="vertical" 
+	android:background="@drawable/shape_bg" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:layout_marginLeft="10.0dip" 
+	android:layout_marginTop="20.0dip" 
+	android:layout_marginRight="10.0dip"
+  	>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+              android:gravity="center"
+            android:text="账号" />
+
+        <EditText
+            android:id="@+id/wanUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:padding="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/listviewbgnormal"
+            android:ems="10"
+            android:hint="上网账号"
+            android:textColor="#ff333333"
+            android:textSize="18.0sp" >
+
+        </EditText>
+        
+    </LinearLayout>
+    
+    <View 
+    android:background="@drawable/shape_line" 
+    android:layout_width="fill_parent" 
+    android:layout_height="1.0px" />
+    
+    <LinearLayout
+        android:id="@+id/mail"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+              android:gravity="center"
+            android:text="密码" />
+        
+        <EditText
+            android:id="@+id/wanPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/listviewbgnormal"
+            android:hint="上网密码"
+             android:padding="5dp"
+            android:textColor="#ff333333"
+            android:textSize="18.0sp" />
+        
+    </LinearLayout>
+
+   </LinearLayout>
+	   <LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_marginLeft="10.0dip" 
+		android:layout_marginTop="15.0dip" 
+		android:layout_marginRight="10.0dip"
+	  	>
+
+	       <Button
+	           android:id="@+id/btnpppoe"
+	          style="@style/buttonPrimary"
+	           android:text="确定"
+	          />
+
+	   </LinearLayout>
+ </LinearLayout>

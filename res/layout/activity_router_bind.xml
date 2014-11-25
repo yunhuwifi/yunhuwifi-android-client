@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".RouterBindActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="请给当前路由器设置一个名称" />
+
+    <com.yunhuwifi.view.ClearEditText
+        android:id="@+id/txtRouterName"
+        style="@style/normalEditText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:id="@+id/btnBind"
+        style="@style/buttonPrimary"
+        android:layout_margin="10dp"
+        android:text="立即绑定" />
+
+</LinearLayout>

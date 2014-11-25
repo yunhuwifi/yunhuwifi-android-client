@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--蓝色值  -->
+    <color name="frametitlecolor">#5cd4f2</color>
+    
+    <!--黄色值  -->
+    <color name="menufontbgcolor">#f3d532</color>
+    
+    <!--橙色值  -->
+   <color name="menucolorpressed">#ff8400</color> 
+
+   <!-- 灰色值 -->
+   <color name="btnupcolornormal">#AAABAF</color> 
+   
+   <!-- item蓝色值 -->
+   <color name="itemcolorpressed">#008db0</color> 
+   
+	 <!-- 红色 -->
+   <color name="red">#FF0000</color>
+   
+   <!-- 淡灰色 -->
+  <color name="gainsboro">#DCDCDC</color>
+   
+  <!-- 白色 -->
+   <color name="white">#FFFFFF</color>
+
+    
+  <!-- 黑色 -->
+    <color name="black">#000000</color>
+    
+    <color name="testspeedpbbg">#0e7fff</color>
+
+    
+<color name="itemlefttoptext">#535353</color>
+<color name="itembottomtext">#56ceeb</color>
+<!-- 第三方登录 -->
+<color name="page_back">#fff2f2f2</color>
+    <color name="logo_text_color">#ff7f7f7f</color>
+    <color name="login_with_other_plat_text_color">#ff383838</color>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!--  第三方登录-->
+    <string name="userid_found">用户信息已存在，正在跳转登录操作…</string>
+    <string name="logining">使用%s帐号登录中…</string>
+    <string name="auth_cancel">授权操作已取消</string>
+    <string name="auth_error">授权操作遇到错误，请阅读Logcat输出</string>
+    <string name="auth_complete">授权成功，正在跳转登录操作…</string>
+    <string name="ok">确定</string>
+
+    <!-- 登录界面begin -->
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="protocollink">我已阅读并同意 <a href="http://www.baidu.com">《云狐wifi协议》</a></string>
+    <string name="app_name">云狐路由器</string>
+    <string name="action_settings">Settings</string>
+    <string name="qq_logout">退出当前账号</string>
+    <string name="title_main">MainActivity</string>
+    <string name="title_file">文件</string>
+    <string name="title_app">应用</string>
+    <string name="title_state">状态</string>
+    <string name="title_setting">设置</string>
+    <string name="title_register">注册</string>
+    <string name="title_login">登录</string>
+    <string name="initdata">正在连接云狐路由器</string>
+    <string name="nowVersion">当前版本</string>
+
+    <string name="visit">允许"云狐路由器"应用进行以下操作:</string>
+    
+    
+    <array name="choice">
+        <item name="start">启动程序</item>
+        <item name="detail">详细信息</item>
+        <item name="uninstall">卸载程序</item>
+    </array>
+
+    <string name="title_activity_router_login">RouterLoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_register_mobile">RegisterMobileActivity</string>
+    <string name="title_activity_register_mobile_verify">RegisterMobileVerifyActivity</string>
+    <string name="title_activity_wifi_list">WifiListActivity</string>
+    <string name="title_activity_plugin_baidupcs">PluginBaidupcsActivity</string>
+    <string name="title_activity_plugin_baidu_pcs">百度云</string>
+    <string name="title_activity_router_bind_list">RouterBindListActivity</string>
+    <string name="title_activity_router_bind">RouterBindActivity</string>
+    <string name="title_activity_plugin_run">PluginRunActivity</string>
+
+</resources>

@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" 
+android:orientation="vertical">
+<include layout="@layout/header" />
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:paddingTop="45dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/layoutpppoe"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:background="@drawable/normalframetitlebg"
+            >
+
+             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/frametitlecolor"
+                android:textSize="13sp"
+                android:text="宽带拨号" />
+            <ImageView
+                android:id="@+id/myImageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/wanframeline" />
+
+           
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutdhcp"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/normalframetitlebg"
+            android:paddingTop="5dp" >
+
+
+           <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:text="动态IP" />
+            <ImageView
+                android:id="@+id/myImageView2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="20dp"
+                 android:visibility="invisible" 
+                android:src="@drawable/wanframeline" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutstaticip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/normalframetitlebg"
+            android:paddingTop="5dp" >
+
+             <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:text="固定IP" />
+            <ImageView
+                android:id="@+id/myImageView3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="20dp"
+                 android:visibility="invisible" 
+                android:src="@drawable/wanframeline" />
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

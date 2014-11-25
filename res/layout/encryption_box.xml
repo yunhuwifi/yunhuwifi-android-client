@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/umeng_update_dialog_bg"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:id="@+id/layhigh"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" 
+            android:background="@drawable/longitembg"
+            android:padding="10dp">
+
+            <TextView
+                 android:id="@+id/txthigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:text="强加密(WPA2)"
+                android:textColor="@color/black" />
+            
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line"
+           />
+
+            <RelativeLayout
+                 android:id="@+id/laymindle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" 
+             android:background="@drawable/longitembg"
+             android:padding="10dp">
+
+            <TextView
+                 android:id="@+id/txtmiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="混合加密(WPA/WPA2)"
+                  android:textSize="18sp"
+                android:textColor="@color/black" />
+            
+        </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/line"
+           />
+
+            <RelativeLayout
+                 android:id="@+id/laylow"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" 
+             android:background="@drawable/longitembg"
+             android:padding="10dp">
+
+            <TextView
+                 android:id="@+id/txtlow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="无加密(允许所有人连接)"
+                  android:textSize="18sp"
+                android:textColor="@color/black" />
+            
+        </RelativeLayout>
+
+        
+</LinearLayout>
+</RelativeLayout>

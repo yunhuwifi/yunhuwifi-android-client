@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+         android:background="@drawable/itembg"
+        android:layout_gravity="center_vertical"
+        android:padding="10dip" >
+
+        <Button
+            android:id="@+id/btnaline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:focusable="false"
+            android:text="移除"
+            android:textColor="@color/white"
+            android:background="@drawable/btninstallbg"
+             />
+		<CheckBox
+          		     style="@style/checkboxtheme"
+          		     android:id="@+id/cbaline"
+          		     android:layout_width="wrap_content"
+          		     android:layout_height="wrap_content"
+          		     android:layout_alignParentRight="true"
+          		      android:layout_centerVertical="true"
+          		      android:focusable="false"
+          		      android:layout_marginRight="5dp"
+          		      android:visibility="gone"
+          		     />
+        <TextView
+            android:id="@+id/tvalineTitle"
+            style="@style/text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imgalineIcon"
+            android:focusable="false"
+            android:text="122.22.10.1"
+            android:textColor="@drawable/cancelfontcolor" />
+
+        <ImageView
+            android:id="@+id/imgalineIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:focusable="false"
+            />
+
+    </RelativeLayout>
+		      
+</LinearLayout>

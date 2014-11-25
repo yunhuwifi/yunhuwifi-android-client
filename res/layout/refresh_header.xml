@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="62dp"   
+    android:orientation="vertical"
+    android:background="@null"
+     >
+   <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+         >
+            <LinearLayout
+            android:id="@+id/layrefreshok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" 
+            android:visibility="gone"
+            >
+         <ImageView 
+            android:id="@+id/imgok"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/checkedicon"
+             android:layout_gravity="center_vertical"
+             />
+         <TextView 
+            android:id="@+id/txtok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="刷新成功"
+             android:textSize="18sp"
+             android:layout_marginLeft="10dp"
+             android:layout_gravity="center_vertical"
+             />
+         </LinearLayout>
+            <LinearLayout
+            android:id="@+id/layrefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" 
+            >
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉刷新"
+                 android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近更新"
+                 android:layout_gravity="center_horizontal"
+                android:textColor="@color/itemlefttoptext"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flcontent"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15.0dip" />
+
+
+    </FrameLayout>
+</LinearLayout>

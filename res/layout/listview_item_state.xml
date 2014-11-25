@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:orientation="vertical"  
+            >
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+         android:orientation="vertical"  
+        >
+        
+    
+          <RelativeLayout
+        android:id="@+id/group_layout_01"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"      
+      	android:paddingLeft="15dp"
+      	android:paddingRight="15dp"
+      android:descendantFocusability="blocksDescendants" 
+        >
+
+          		 <ImageView
+          		     android:id="@+id/ivState"
+          		     android:layout_width="wrap_content"
+          		     android:layout_height="wrap_content"
+          		     android:layout_alignParentRight="true"
+          		      android:layout_centerVertical="true"
+          		      android:focusable="false"
+          		     android:src="@drawable/nexticon" />
+          		 <CheckBox
+          		     style="@style/checkboxtheme"
+          		     android:id="@+id/cbState"
+          		     android:layout_width="wrap_content"
+          		     android:layout_height="wrap_content"
+          		     android:layout_alignParentRight="true"
+          		      android:layout_centerVertical="true"
+          		      android:focusable="false"
+          		      android:visibility="visible"
+          		     />
+
+      <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+             >
+
+            <TextView
+                android:id="@+id/tvdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="删除"
+                android:background="@color/frametitlecolor"
+                 android:clickable="true"
+                android:textColor="#000000"
+                android:gravity="center_vertical"
+                 android:visibility="gone"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+        <LinearLayout 
+            
+          		     android:layout_centerVertical="true"
+          		     android:layout_width="wrap_content"
+          		     android:layout_height="wrap_content"
+          		     android:orientation="vertical"
+            >
+            
+          		 <TextView
+          		     android:id="@+id/tvState"
+          		     android:layout_width="wrap_content"
+          		     android:layout_height="wrap_content"
+          		     android:focusable="false"
+          		     android:text="dd"
+          		     android:textColor="@color/white"
+          		     android:layout_gravity="center_vertical"
+          		     android:textSize="18sp" />
+          		 <TextView
+          		     android:id="@+id/tvStateTime"
+          		     android:layout_gravity="center_vertical"
+          		     android:layout_width="wrap_content"
+          		     android:layout_height="wrap_content"
+          		     android:focusable="false"
+          		     android:text="2014-11-22"
+          		     android:textColor="@color/white"
+          		     android:textSize="18sp" />
+        </LinearLayout>
+          		 
+
+          </RelativeLayout>
+
+       
+   </LinearLayout>
+ </LinearLayout>

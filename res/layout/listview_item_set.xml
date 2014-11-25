@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:padding="10dp"
+         android:background="@drawable/itembg"
+         android:descendantFocusability="blocksDescendants" 
+          >
+
+        <ImageView
+            android:id="@+id/ivset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/tvset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivset"
+            android:layout_marginLeft="15dp"
+            android:text="t"
+            android:textColor="@drawable/cancelfontcolor"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivsetnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:focusable="false"
+            android:src="@drawable/nextbg" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+           <RelativeLayout
+		          android:padding="10dip"
+		          android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+				android:background="@drawable/itembg"
+	                  android:descendantFocusability="blocksDescendants" 
+		          >
+
+		          <LinearLayout
+		              android:layout_width="match_parent"
+		              android:layout_height="wrap_content"
+		              android:layout_toLeftOf="@+id/btnDevice"
+		              android:layout_toRightOf="@+id/ivDevice"
+		              android:orientation="vertical"
+		              android:layout_marginLeft="8dip"
+		              android:layout_marginRight="8dip"
+		              android:layout_centerVertical="true"
+		               >
+
+					          <TextView
+					              android:id="@+id/tvDeviceTitle"
+					              android:layout_width="wrap_content"
+				              	  android:layout_height="fill_parent"
+				              	  android:layout_weight="1"
+				              	  android:padding="2dip"
+				              	   android:focusable="false"
+				              	  android:textColor="@drawable/cancelfontcolor"
+				              	  style="@style/text_large"
+				              	  android:text="t"
+				              	  android:gravity="center"
+					              />
+					          <TextView
+				              	  android:text="t"
+					              android:id="@+id/tvDeviceIp"
+					              android:layout_width="wrap_content"
+					              android:layout_height="wrap_content"
+					              android:layout_weight="1"
+					               style="@style/text_small"
+					               />
+		          </LinearLayout>
+ 					<Button
+			              android:id="@+id/btnDevice"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"
+			              android:layout_alignParentRight="true"
+			               android:layout_centerVertical="true"
+			              android:focusable="false"
+			              android:visibility="visible"
+			              android:layout_marginRight="15dp"
+			              android:textColor="@color/white"
+			              android:text="定时"
+			              android:background="@drawable/btninstallbg" />
+ 					<CheckBox
+			              android:id="@+id/cbnext"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"
+			              android:layout_alignParentRight="true"
+			               android:layout_centerVertical="true"
+			              android:focusable="false"
+			              android:layout_marginRight="15dp"
+			              android:visibility="gone"
+			              style="@style/checkboxtheme" />
+		          
+
+
+		          <ImageView
+		              android:id="@+id/ivDevice"
+		              android:layout_width="wrap_content"
+		              android:layout_height="wrap_content"
+		              android:layout_alignParentLeft="true"
+		              android:layout_centerVertical="true"
+		              android:scaleType="fitXY"
+		              android:src="@drawable/launcher"
+		              android:visibility="visible" />
+
+		      </RelativeLayout>   
+		      
+</LinearLayout>

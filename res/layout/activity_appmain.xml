@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" 
+     tools:context=".ExpandActivity">
+
+    <LinearLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_index_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:background="@drawable/normalframetitlebg"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_install"
+            style="@style/menuTitle"
+            android:background="@drawable/pressedframetitlebg"
+            android:text="已安装"
+            android:textColor="@color/frametitlecolor" />
+
+        <TextView
+            android:id="@+id/tv_notinstall"
+            style="@style/menuTitle"
+            android:background="@drawable/normalframetitlebg"
+            android:text="未安装"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_index_bar" />
+
+</RelativeLayout>
