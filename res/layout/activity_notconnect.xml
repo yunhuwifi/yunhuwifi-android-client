@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+     xmlns:tools="http://schemas.android.com/tools"
+     tools:context=".NotConnectActivity"
+     android:orientation="vertical"
+     >
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+    >
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="未连接云狐路由器"
+        android:textColor="@color/black"
+        android:layout_marginBottom="40dp"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/misswifi" />
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+        android:layout_weight="1"
+        android:orientation="vertical"
+    >
+
+        <Button
+            android:id="@+id/yunhuuserlogin"
+            style="@style/buttonPrimary"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="云狐账号登录" />
+
+    <Button
+        android:id="@+id/btnreconnect"
+        style="@style/regButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="打开wifi" />
+
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee"
+    tools:context=".CheckUpdateActivity" >
+
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="45dp"
+       android:background="@drawable/head"
+       android:orientation="vertical" >
+ 			<Button
+            android:id="@+id/reg_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/backbg"
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="goback"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+	    android:layout_centerVertical="true"
+            android:textSize="20.0sp" />
+
+       <!--  <TextView
+            android:id="@+id/txtRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkrefresh"/>-->
+            <Button 
+             android:id="@+id/checkUpdate"   
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_centerVertical="true"
+			    android:text="检查更新"
+			    android:drawableLeft="@drawable/checkupdate"
+			    android:background="#F0FFF0"
+			     />
+            
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_style"
+        >
+    <ImageView
+        android:id="@+id/imgupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vesinupdate" />
+	</RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10.0dp"
+        android:id="@+id/nowVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nowVersion" />
+<TextView
+		          android:layout_width="fill_parent"
+	              android:layout_height="1dp"
+	              android:background="@drawable/line"
+		          />
+    <RelativeLayout
+        android:id="@+id/group_layout_01"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/group_img_01"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/deviceupdate"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/row_img_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="matrix"
+            android:src="@drawable/nexticon" />
+
+        <TextView
+            android:id="@+id/devicename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/group_img_01"
+            android:layout_toRightOf="@+id/group_img_01"
+            android:text="bcm63xx"
+            android:textColor="#202020"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/group_img_01"
+            android:layout_toRightOf="@+id/group_img_01"
+            android:text="Fox OS 0.7 (开发版)" />
+
+    </RelativeLayout>
+<TextView
+		          android:layout_width="fill_parent"
+	              android:layout_height="1dp"
+	              android:background="@drawable/line"
+		          />
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:clickable="true" 
+        >
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/mobile"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="matrix"
+            android:src="@drawable/nexticon" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ImageView01"
+            android:layout_toRightOf="@+id/ImageView01"
+            android:text="手机应用"
+            android:textColor="#202020"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/firmware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ImageView01"
+            android:layout_toRightOf="@+id/ImageView01"
+            android:text="1.0.11" />
+    </RelativeLayout>
+
+<TextView
+		          android:layout_width="fill_parent"
+	              android:layout_height="1dp"
+	              android:background="@drawable/line"
+		          />
+
+</LinearLayout>

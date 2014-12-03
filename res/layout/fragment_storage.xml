@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearStorage"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" 
+    android:orientation="vertical"
+    >
+
+  
+
+      <ListView
+        android:id="@+id/lvstorage"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:divider="#ffebebeb"
+        android:dividerHeight="1dp"
+        android:cacheColorHint="@android:color/transparent"
+        >
+    </ListView>
+<LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/linearoperate"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:background="@drawable/operationbg"
+        android:visibility="gone"
+        >
+
+    <Button
+        android:id="@+id/btncope"
+        style="@style/bottomoperate"
+        android:drawableTop="@drawable/operatecopybg"
+        android:text="复制" />
+     
+        <Button
+                
+            android:id="@+id/btnshear"
+            android:text="粘贴"
+            style="@style/bottomoperate"
+            android:drawableTop="@drawable/operateshearbg"
+                
+            />
+        <Button
+                
+            android:id="@+id/btnmove"
+            android:text="移动"
+            style="@style/bottomoperate"
+            android:drawableTop="@drawable/operatemovebg"
+                
+            />
+        <TextView
+                
+            android:id="@+id/total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共0个\n选中0个|"
+            android:textSize="14sp"
+         	android:layout_weight="1"
+            android:visibility="gone"    
+            />
+            
+        <Button
+            android:id="@+id/btndeleted"
+            android:text="删除"
+            android:drawableTop="@drawable/operatedelbg"
+             style="@style/bottomoperate"
+            />
+            </LinearLayout>
+</LinearLayout>

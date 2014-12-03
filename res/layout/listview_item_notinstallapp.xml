@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+           <RelativeLayout
+		          android:padding="5dip"
+		          android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+	                  android:descendantFocusability="blocksDescendants" 
+	                  android:background="@drawable/itembg"
+		          >
+		          <ImageView
+		              android:id="@+id/ivInstall"
+		              android:layout_alignParentLeft="true" 
+		              android:layout_width="50dip"
+	              	  android:layout_height="50dip"
+	              	  android:src="@drawable/launcher"
+	              	  android:scaleType="fitCenter"
+		              />
+
+		          <LinearLayout
+		              android:layout_width="match_parent"
+		              android:layout_height="wrap_content"
+		              android:layout_toLeftOf="@+id/btnInstall"
+		              android:layout_toRightOf="@id/ivInstall"
+		              android:orientation="vertical"
+		              android:paddingLeft="8dip"
+		              android:paddingRight="8dip"
+		               >
+
+			          <TextView
+			              android:id="@+id/tvInstall"
+			              android:layout_width="wrap_content"
+		              	  android:layout_height="wrap_content"
+		              	  android:layout_weight="1"
+		              	  android:padding="2dip"
+		              	  android:text="t"
+		              	  android:scrollHorizontally="true"
+		              	  android:gravity="center"
+			              />
+			          <TextView
+			              android:id="@+id/tvMsg"
+			              android:layout_width="wrap_content"
+		              	  android:layout_height="fill_parent"
+		              	  android:padding="2dip"
+		              	  android:layout_weight="1"
+		              	  android:text="t"
+		              	  style="@style/text_small"
+		              	  android:gravity="center"
+			              />
+		          </LinearLayout>
+
+
+		          
+
+		              <Button
+		                  android:id="@+id/btnInstall"
+		                  style="@style/buttonItem"
+		                  android:focusable="false"
+		                  android:text="安装"
+		                  android:layout_centerVertical="true"
+		                  android:layout_alignParentRight="true"
+		                  android:visibility="visible" />
+		          </RelativeLayout>
+
+		      
+</LinearLayout>
