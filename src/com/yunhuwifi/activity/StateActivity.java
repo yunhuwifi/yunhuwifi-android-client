@@ -285,10 +285,21 @@ public class StateActivity extends BaseFragmentActivity implements OnClickListen
 		private void init() {
 			listState = new ArrayList<ListViewItem>();
 			RouterState item1=new RouterState();
-//			item1.setViewoperate(R.drawable.nextbg);
 			item1.setMsg("已是最新版本");
 			item1.setTime("2012-12-3");
+			RouterState item4=new RouterState();
+			item4.setMsg("新连接一个设备");
+			item4.setTime("2012-12-3");
+			RouterState item2=new RouterState();
+			item2.setMsg("离线下载");
+			item2.setTime("2012-12-3");
+			RouterState item3=new RouterState();
+			item3.setMsg("已是最新版本");
+			item3.setTime("2012-12-3");
+			listState.add(item3);
 			listState.add(item1);
+			listState.add(item2);
+			listState.add(item4);
 
 		}
     

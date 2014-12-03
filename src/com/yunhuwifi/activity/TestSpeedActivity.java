@@ -12,7 +12,6 @@ import com.yunhuwifi.view.CircleProgressBar;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.TranslateAnimation;
@@ -20,7 +19,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,7 +68,6 @@ public class TestSpeedActivity extends BaseActivity {
 				new Thread() {
 					@Override
 					public void run() {
-						Log.e("er", "ermsg12");
 						imageData = ReadFile.getFileFromUrl(url,
 								netWorkSpeedInfo);
 					}
@@ -84,13 +81,10 @@ public class TestSpeedActivity extends BaseActivity {
 								sleep(1000);
 							} catch (InterruptedException e) {
 								e.printStackTrace();
-								Log.e("er", "ermsg002");
 							}
 							handler.sendEmptyMessage(UPDATE_SPEED);
-							Log.e("er", "ermsg02");
 						}
 						if (netWorkSpeedInfo.hadFinishedBytes == netWorkSpeedInfo.totalBytes) {
-							Log.e("er", "ermsg002");
 							handler.sendEmptyMessage(UPDATE_DNOE);
 							netWorkSpeedInfo.hadFinishedBytes = 0;
 						}
@@ -174,7 +168,6 @@ public class TestSpeedActivity extends BaseActivity {
 			int value = msg.what;
 			switch (value) {
 			case UPDATE_SPEED:
-				Log.e("er", "ermsg1");
 				tvmaxtxt.setVisibility(View.GONE);
 //				tvpbtxt.setVisibility(View.GONE);
 				tvspeed.setVisibility(View.GONE);
@@ -206,23 +199,23 @@ public class TestSpeedActivity extends BaseActivity {
 				downSpeedText(falg,avageSpeed);
 				downSpeedText(speedMin,min_speed);
 				startButton.setText("正在检测...");
-				Log.e("er", "ermsg2");
+				
+				int pg=broadband(speedMax/1024);
+				horizontalPB.setProgress(pg);
+				int x=pg+10;
+				TranslateAnimation animation=new TranslateAnimation(0, 0, x, 0);
+				tvpbtxt.setAnimation(animation);
 				break;
 			case UPDATE_DNOE:
-				Log.e("er", "ermsg3");
 				downSpeedText(speedMax,tvspeed,tvunit);
 				tvspeed.setVisibility(View.VISIBLE);
 				tvunit.setVisibility(View.VISIBLE);
 				circlePb.setProgressNotInUiThread(100,"");
 //				layscale.setVisibility(View.VISIBLE);
-				int pg=broadband(speedMax/1024);
-				horizontalPB.setProgress(pg);
-				int x=pg+8;
+			
 //				RelativeLayout.LayoutParams pa=(RelativeLayout.LayoutParams) tvpbtxt.getLayoutParams();
 //				pa.setMargins(x,0,0,0);
 //				tvpbtxt.setLayoutParams(pa);
-				TranslateAnimation animation=new TranslateAnimation(0, 0, x, 0);
-				tvpbtxt.setAnimation(animation);
 //				tvpbtxt.setVisibility(View.VISIBLE);
 				tvmaxtxt.setVisibility(View.VISIBLE);
 				startButton.setText("重新检测");
