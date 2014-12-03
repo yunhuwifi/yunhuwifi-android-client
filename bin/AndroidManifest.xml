@@ -150,10 +150,11 @@
         <activity android:name="com.yunhuwifi.activity.FileActivity" />
         <activity android:name="com.yunhuwifi.activity.DownloadActivity" />
         <activity android:name="com.yunhuwifi.activity.BaiDuLoginActivity" />
-        <activity android:name="com.yunhuwifi.activity.TestActivity" />
-        <activity android:name="com.yunhuwifi.activity.TestOkActivity" />
-        <activity android:name="com.yunhuwifi.activity.TestWifiSetActivity" />
-        <activity android:name="com.yunhuwifi.activity.TestPPOEActivity" />
+        <activity android:name="com.yunhuwifi.activity.WizardTestActivity" />
+        <activity android:name="com.yunhuwifi.activity.WizardOkActivity" />
+        <activity android:name="com.yunhuwifi.activity.WizardWifiSetActivity" />
+        <activity android:name="com.yunhuwifi.activity.WizardPPOEActivity" />
+        <activity android:name="com.yunhuwifi.activity.WizardManagePwdSetActivity" />
         
         <activity
             android:name="com.yunhuwifi.activity.ExitActivity"

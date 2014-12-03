@@ -15,7 +15,9 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -31,8 +33,9 @@ public class TestSpeedActivity extends BaseActivity {
 	private final int UPDATE_DNOE = 0;
 	private ProgressBar horizontalPB;
 	private CircleProgressBar circlePb; 
-	private LinearLayout lay_speed,layscale;
-	private Button startButton, btnback;
+	private LinearLayout lay_speed;
+	private Button startButton;
+	private ImageView ivmainback;
 	private TextView nowSpeed, avageSpeed, min_speed,tvunit,tvspeed,tvpbtxt,tvmaxtxt;
 	private double speedMax,speedMin;
 	long tem = 0;
@@ -44,11 +47,10 @@ public class TestSpeedActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test_speed);
 		startButton = (Button) findViewById(R.id.start_button);
-		btnback = (Button) findViewById(R.id.btnback);
+		ivmainback = (ImageView) findViewById(R.id.ivmainback);
 		nowSpeed = (TextView) findViewById(R.id.now_speed);
 		min_speed = (TextView) findViewById(R.id.min_speed);
 		lay_speed = (LinearLayout) findViewById(R.id.lay_speed);
-		layscale = (LinearLayout) findViewById(R.id.layscale);
 		avageSpeed = (TextView) findViewById(R.id.average_speed);
 		tvspeed = (TextView) findViewById(R.id.tvspeed);
 		tvunit = (TextView) findViewById(R.id.tvunit);
@@ -98,7 +100,7 @@ public class TestSpeedActivity extends BaseActivity {
 			}
 		});
 
-		btnback.setOnClickListener(new OnClickListener() {
+		ivmainback.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -174,10 +176,10 @@ public class TestSpeedActivity extends BaseActivity {
 			case UPDATE_SPEED:
 				Log.e("er", "ermsg1");
 				tvmaxtxt.setVisibility(View.GONE);
-				tvpbtxt.setVisibility(View.GONE);
+//				tvpbtxt.setVisibility(View.GONE);
 				tvspeed.setVisibility(View.GONE);
 				tvunit.setVisibility(View.GONE);
-				layscale.setVisibility(View.GONE);
+//				layscale.setVisibility(View.GONE);
 				downloadPercent=(int) (netWorkSpeedInfo.hadFinishedBytes *100/netWorkSpeedInfo.totalBytes);
 				circlePb.setProgressNotInUiThread(downloadPercent,"");
 				tem = netWorkSpeedInfo.speed ;
@@ -212,14 +214,16 @@ public class TestSpeedActivity extends BaseActivity {
 				tvspeed.setVisibility(View.VISIBLE);
 				tvunit.setVisibility(View.VISIBLE);
 				circlePb.setProgressNotInUiThread(100,"");
-				layscale.setVisibility(View.VISIBLE);
+//				layscale.setVisibility(View.VISIBLE);
 				int pg=broadband(speedMax/1024);
 				horizontalPB.setProgress(pg);
-				int x=pg+tvpbtxt.getWidth()/4;
-				RelativeLayout.LayoutParams pa=(RelativeLayout.LayoutParams) tvpbtxt.getLayoutParams();
-				pa.setMargins(x,0,0,0);
-				tvpbtxt.setLayoutParams(pa);
-				tvpbtxt.setVisibility(View.VISIBLE);
+				int x=pg+8;
+//				RelativeLayout.LayoutParams pa=(RelativeLayout.LayoutParams) tvpbtxt.getLayoutParams();
+//				pa.setMargins(x,0,0,0);
+//				tvpbtxt.setLayoutParams(pa);
+				TranslateAnimation animation=new TranslateAnimation(0, 0, x, 0);
+				tvpbtxt.setAnimation(animation);
+//				tvpbtxt.setVisibility(View.VISIBLE);
 				tvmaxtxt.setVisibility(View.VISIBLE);
 				startButton.setText("重新检测");
 				showToast("检测完成", Toast.LENGTH_SHORT);

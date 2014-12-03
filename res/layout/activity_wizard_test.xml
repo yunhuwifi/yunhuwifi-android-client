@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="经检测外网已连通连通！连通"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvnow"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="当前连接方式为:dhpc"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivtest"
+        android:layout_below="@+id/tvnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/testicon" />
+
+    <Button
+        android:id="@+id/btnTestPPOE"
+        style="@style/buttonPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/ivtest"
+        android:text="下一步" />
+
+    <Button
+        android:id="@+id/tvTestNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ivtest"
+        android:background="@null"
+        android:layout_below="@+id/btnTestPPOE"
+        android:text="切换到宽带拨号"
+        android:textColor="@drawable/changecolor" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恭喜您，配置完成！"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv1"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_below="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/testokicon" />
+
+    <Button
+        android:id="@+id/btnBindCount"
+        style="@style/buttonPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/imageView1"
+        android:text="绑定账号" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        style="@style/regButton"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/btnBindCount"
+        android:layout_marginTop="40dp"
+        android:text="跳过" />
+
+</RelativeLayout>
