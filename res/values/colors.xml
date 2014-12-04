@@ -32,7 +32,7 @@
 
     
     <color name="changetxtcolor">#5b5b5b</color>
-    
+    <color name="downcolor">#56ceeb</color>
 <color name="itemlefttoptext">#535353</color>
 <color name="itembottomtext">#56ceeb</color>
 <!-- 第三方登录 -->
