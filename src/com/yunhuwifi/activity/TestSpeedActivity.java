@@ -202,7 +202,7 @@ public class TestSpeedActivity extends BaseActivity {
 				
 				int pg=broadband(speedMax/1024);
 				horizontalPB.setProgress(pg);
-				int x=pg+10;
+				int x=pg+tvpbtxt.getWidth();
 				TranslateAnimation animation=new TranslateAnimation(0, 0, x, 0);
 				tvpbtxt.setAnimation(animation);
 				break;
@@ -212,7 +212,6 @@ public class TestSpeedActivity extends BaseActivity {
 				tvunit.setVisibility(View.VISIBLE);
 				circlePb.setProgressNotInUiThread(100,"");
 //				layscale.setVisibility(View.VISIBLE);
-			
 //				RelativeLayout.LayoutParams pa=(RelativeLayout.LayoutParams) tvpbtxt.getLayoutParams();
 //				pa.setMargins(x,0,0,0);
 //				tvpbtxt.setLayoutParams(pa);
