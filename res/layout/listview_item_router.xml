@@ -12,7 +12,7 @@
         android:layout_width="36.0dip"
         android:layout_height="36.0dip"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dip"
+        android:layout_marginLeft="5dip"
         android:scaleType="fitXY"
         android:src="@drawable/launcher" />
 
@@ -22,17 +22,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="10dip"
+        android:layout_marginRight="5dp"
         android:scaleType="fitXY"
         android:focusable="false"
         android:src="@drawable/checkedlist"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toLeftOf="@+id/ivChecked"
         android:layout_toRightOf="@+id/ivRouter"
+        android:layout_centerVertical="true"
         android:orientation="vertical" >
 
         <TextView

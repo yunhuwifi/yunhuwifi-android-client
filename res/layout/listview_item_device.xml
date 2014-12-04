@@ -29,7 +29,6 @@
 					              android:layout_width="wrap_content"
 				              	  android:layout_height="fill_parent"
 				              	  android:layout_weight="1"
-				              	  android:padding="2dip"
 				              	   android:focusable="false"
 				              	  android:textColor="@drawable/cancelfontcolor"
 				              	  style="@style/text_large"
@@ -45,18 +44,17 @@
 					               style="@style/text_small"
 					               />
 		          </LinearLayout>
- 					<Button
-			              android:id="@+id/btnDevice"
+ 					<ImageView
+			              android:id="@+id/ivDeviceNext"
 			              android:layout_width="wrap_content"
 			              android:layout_height="wrap_content"
 			              android:layout_alignParentRight="true"
 			               android:layout_centerVertical="true"
 			              android:focusable="false"
-			              android:visibility="visible"
-			              android:layout_marginRight="15dp"
+			              android:layout_marginRight="5dp"
 			              android:textColor="@color/white"
 			              android:text="定时"
-			              android:background="@drawable/btninstallbg" />
+			              android:src="@drawable/nexticon" />
  					<CheckBox
 			              android:id="@+id/cbnext"
 			              android:layout_width="wrap_content"
@@ -78,7 +76,8 @@
 		              android:layout_centerVertical="true"
 		              android:scaleType="fitXY"
 		              android:src="@drawable/launcher"
-		              android:visibility="visible" />
+		              android:layout_marginLeft="5dp"
+ 					/>
 
 		      </RelativeLayout>   
 		      

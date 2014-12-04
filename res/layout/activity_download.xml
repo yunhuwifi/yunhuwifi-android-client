@@ -33,7 +33,7 @@
             android:id="@+id/tvnotdownload"
             style="@style/menuTitle"
             android:background="@drawable/normalframetitlebg"
-            android:text="未下载"
+            android:text="下载中"
             android:textColor="@color/black" />
     </LinearLayout>
 

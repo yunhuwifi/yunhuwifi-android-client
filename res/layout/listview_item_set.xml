@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
          android:padding="10dp"
          android:background="@drawable/itembg"
          android:descendantFocusability="blocksDescendants" 
@@ -19,6 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/wifiicon"
             />
 
         <TextView
@@ -38,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
             android:checked="true"
             android:focusable="false"
             android:src="@drawable/nextbg" />

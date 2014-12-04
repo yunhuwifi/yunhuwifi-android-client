@@ -61,8 +61,9 @@
              android:layout_alignLeft="@+id/relativeLayout1"
             android:layout_alignRight="@+id/relativeLayout1"
           android:layout_margin="10dp"
-          android:gravity="center"
             android:layout_below="@+id/relativeLayout1"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp"
             android:text="体检测速" />
 
 
@@ -122,8 +123,9 @@
             android:layout_alignLeft="@+id/relativeLayout2"
             android:layout_alignRight="@+id/relativeLayout2"
             android:layout_below="@+id/relativeLayout2"
+            android:paddingBottom="5dp"
+             android:paddingTop="2dp"
             android:layout_margin="10dp"
-            android:gravity="center_vertical|center_horizontal"
             android:text="存储管理" />
 
     </RelativeLayout>

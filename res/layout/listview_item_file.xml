@@ -16,7 +16,6 @@
 		          <LinearLayout
 		              android:layout_width="match_parent"
 		              android:layout_height="wrap_content"
-		              android:layout_toLeftOf="@+id/ivnext"
 		              android:layout_toRightOf="@+id/ivfile"
 		              android:orientation="vertical"
 		              android:layout_marginLeft="8dip"
@@ -29,34 +28,21 @@
 					              android:layout_width="wrap_content"
 				              	  android:layout_height="fill_parent"
 				              	  android:layout_weight="1"
-				              	  android:padding="2dip"
 				              	   android:focusable="false"
 				              	  android:textColor="@drawable/cancelfontcolor"
 				              	  style="@style/text_large"
-				              	  android:gravity="center"
+				              	  android:gravity="left"
 				              	  android:text="t"
 					              />
-					            <LinearLayout
-		              android:layout_width="match_parent"
-		              android:layout_height="wrap_content"
-		              android:orientation="horizontal"
-		              android:layout_weight="1">
-					          <TextView
-					              android:id="@+id/tvFileSize"
-					              android:layout_width="wrap_content"
-					              android:layout_height="wrap_content"
-					               style="@style/text_small"
-					               android:text="t"
-					               />
-					          <TextView
-					              android:id="@+id/tvFileTime"
-					              android:layout_width="wrap_content"
-					              android:layout_height="wrap_content"
-					               style="@style/text_small"
-					               android:text="2014-11-22"
-					               android:layout_marginLeft="20dp"
-					              />
-					          </LinearLayout>
+							          <TextView
+							              android:layout_weight="1"
+						              	  android:gravity="left"
+							              android:id="@+id/tvFileSize"
+							              android:layout_width="wrap_content"
+							              android:layout_height="wrap_content"
+							               style="@style/text_small"
+							               android:text="t"
+							               />
 		          </LinearLayout>
  					
  					<CheckBox

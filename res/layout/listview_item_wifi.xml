@@ -20,6 +20,7 @@
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
             android:src="@drawable/checkedlist" 
+            android:layout_marginLeft="5dp"
             />
 
         <TextView
@@ -43,6 +44,7 @@
             android:background="@drawable/selector_butn_toggle"
             android:checked="true"
             android:focusable="false"
+            android:layout_marginRight="5dp"
             android:gravity="center" />
 
     </RelativeLayout>

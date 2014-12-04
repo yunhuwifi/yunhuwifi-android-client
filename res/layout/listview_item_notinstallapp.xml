@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
            <RelativeLayout
-		          android:padding="5dip"
+		          android:padding="10dip"
 		          android:layout_width="fill_parent"
 	              android:layout_height="wrap_content"
 	                  android:descendantFocusability="blocksDescendants" 
@@ -16,6 +16,7 @@
 		              android:layout_width="50dip"
 	              	  android:layout_height="50dip"
 	              	  android:src="@drawable/launcher"
+	              	  android:layout_marginLeft="5dp"
 	              	  android:scaleType="fitCenter"
 		              />
 
@@ -25,6 +26,7 @@
 		              android:layout_toLeftOf="@+id/btnInstall"
 		              android:layout_toRightOf="@id/ivInstall"
 		              android:orientation="vertical"
+		              android:layout_centerVertical="true"
 		              android:paddingLeft="8dip"
 		              android:paddingRight="8dip"
 		               >
@@ -57,11 +59,13 @@
 		              <Button
 		                  android:id="@+id/btnInstall"
 		                  style="@style/buttonItem"
+		                  android:layout_height="35dp"
+		                  android:layout_width="70dp"
 		                  android:focusable="false"
 		                  android:text="安装"
 		                  android:layout_centerVertical="true"
 		                  android:layout_alignParentRight="true"
-		                  android:visibility="visible" />
+		                  android:layout_marginRight="5dp" />
 		          </RelativeLayout>
 
 		      
