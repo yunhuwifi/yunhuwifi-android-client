@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/detectpressed" />
-    <item android:drawable="@drawable/detectnormal" />
+    <item android:state_pressed="true" android:drawable="@drawable/btntestspeedpressed" />
+    <item android:drawable="@drawable/btntestspeednormal" />
 </selector>
