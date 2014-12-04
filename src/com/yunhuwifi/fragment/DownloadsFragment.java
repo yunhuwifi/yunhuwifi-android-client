@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.yunhuwifi.activity.R;
-import com.yunhuwifi.models.RouterState;
+import com.yunhuwifi.models.RouterDownload;
 import com.yunhuwifi.view.ListViewAdapter;
 import com.yunhuwifi.view.ListViewItem;
 
 import android.app.Dialog;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -48,12 +49,48 @@ public class DownloadsFragment extends Fragment {
 	
 	private void  init(){
 		listData=new ArrayList<ListViewItem>();
-		RouterState item1=new RouterState();
-		item1.setMsg("匹诺曹" );
-		RouterState item2=new RouterState();
-		item2.setMsg("飞虎2" );
-		listData.add(item2);
-		listData.add(item1);
+		
+		RouterDownload download1=new RouterDownload();
+		download1.setDownloadtitle("变形金刚4");
+		download1.setDownloadpercent("86%");
+		download1.setDownloadBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.item0));
+		download1.setDownloadprogress(86);
+		download1.setDownloadsize("653MB");
+		download1.setDownloadspeed("312kB/s");
+		download1.setDownloadstate("下载中...");
+		listData.add(download1);
+		
+		RouterDownload download2=new RouterDownload();
+		download2.setDownloadtitle("星球崛起2");
+		download2.setDownloadpercent("65%");
+		download2.setDownloadBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.item1));
+		download2.setDownloadprogress(65);
+		download2.setDownloadsize("594MB");
+		download2.setDownloadspeed("212kB/s");
+		download2.setDownloadstate("下载中...");
+		listData.add(download2);
+		
+		RouterDownload download3=new RouterDownload();
+		download3.setDownloadtitle("狂怒");
+		download3.setDownloadpercent("58%");
+		download3.setDownloadBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.item2));
+		download3.setDownloadprogress(58);
+		download3.setDownloadsize("526MB");
+		download3.setDownloadspeed("192kB/s");
+		download3.setDownloadstate("下载中...");
+		listData.add(download3);
+		
+		RouterDownload download4=new RouterDownload();
+		download4.setDownloadtitle("使徒行者第1集");
+		download4.setDownloadpercent("26%");
+		download4.setDownloadBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.item3));
+		download4.setDownloadprogress(26);
+		download4.setDownloadsize("101MB");
+		download4.setDownloadspeed("96kB/s");
+		download4.setDownloadstate("下载中...");
+		listData.add(download4);
+		
+		
 		adapter=new ListViewAdapter(getActivity(), listData, 1, handler);
 		lvnotdownload.setAdapter(adapter);
 		lvnotdownload.setOnItemClickListener(new OnItemClickListener() {

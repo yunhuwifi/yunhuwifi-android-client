@@ -3,6 +3,7 @@ package com.yunhuwifi.view;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -82,8 +83,8 @@ public class ListViewAdapter extends BaseAdapter {
 					convertView = inflater.inflate(R.layout.listview_item_download, null);
 				holder.stateView = (TextView) convertView
 						.findViewById(R.id.tvDowningState);
-				holder.timeView = (TextView) convertView
-						.findViewById(R.id.tvDowningtime);
+				holder.descriptionView=(TextView) convertView
+						.findViewById(R.id.tvDowningSpeed);
 				holder.sizeView = (TextView) convertView
 						.findViewById(R.id.tvDowningSize);
 				holder.percentView = (TextView) convertView
@@ -132,7 +133,7 @@ public class ListViewAdapter extends BaseAdapter {
 							.findViewById(R.id.tvDeviceIp);
 					holder.bitmapView = (ImageView) convertView
 							.findViewById(R.id.ivDevice);
-					holder.operationview=convertView.findViewById(R.id.btnDevice);
+					holder.operationview=convertView.findViewById(R.id.ivDeviceNext);
 					convertView.setTag(holder);
 				
 				break;
@@ -141,7 +142,6 @@ public class ListViewAdapter extends BaseAdapter {
 					convertView = inflater.inflate(R.layout.listview_item_file, null);
 					holder.titleView = (TextView) convertView.findViewById(R.id.tvFileTitle);
 					holder.sizeView = (TextView) convertView.findViewById(R.id.tvFileSize);
-					holder.timeView = (TextView) convertView.findViewById(R.id.tvFileTime);
 					holder.bitmapView = (ImageView) convertView.findViewById(R.id.ivfile);
 					holder.checkview = (CheckBox) convertView.findViewById(R.id.cbFile);
 					convertView.setTag(holder);
@@ -218,20 +218,14 @@ public class ListViewAdapter extends BaseAdapter {
 			case 1:
 				 
 				ListViewItem item1 = listData.get(position);
-//				holder.bitmapView.setImageBitmap((item.getBitmap()));
+				holder.bitmapView.setImageBitmap((item1.getBitmap()));
 				holder.titleView.setText(item1.getTitle());
-//				holder.operationview.setBackgroundResource((item1.getOperationView()));
-//				holder.sizeView.setText(item1.getSize());
-//				holder.percentView.setText(item1.getPrecent());
-//				holder.stateView.setText(item1.getState());
-//				holder.timeView.setText(item1.getDate());
-				holder.operationview.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						Button btn=(Button) v;
-						btn.setBackgroundResource(R.drawable.stopicon);
-					}
-				});
+				holder.descriptionView.setText(item1.getSpeed());
+				holder.sizeView.setText(item1.getSize());
+				holder.percentView.setText(item1.getPrecent());
+				holder.stateView.setText(item1.getState());
+				holder.pbView.setProgress(item1.getProgress());
+				holder.operationview.setOnClickListener(new MyLister(position));
 				break;
 			case 2:
 				 
@@ -277,7 +271,7 @@ public class ListViewAdapter extends BaseAdapter {
 					@Override
 					public void onClick(View v) {
 						Button installing=(Button) v;
-						installing.setText("安装中");
+						installing.setText("安装中...");
 						installing.setBackgroundResource(R.drawable.installing);
 						installing.setClickable(false);
 					}
@@ -313,6 +307,27 @@ public class ListViewAdapter extends BaseAdapter {
 		View operationview;
 		CheckBox checkview; 
 	}
+	
+	@SuppressLint("ResourceAsColor")
+	public class MyLister implements OnClickListener{
+		
+		private int po;
+		public MyLister(int position){
+			this.po=position;
+		}
+		
+		@Override
+		public void onClick(View v) {
+			if(v.getId()==holder.operationview.getId()){
+				holder.operationview.setBackgroundResource(R.drawable.continueicon);
+				holder.stateView.setText("已暂停");
+				holder.stateView.setTextColor(R.color.changetxtcolor);
+			}
+			
+		}
+		
+	}
+	
 	private int findCount() {
 		int count = 0;
 		for (int i = 0; i < flags.size(); i++) {
