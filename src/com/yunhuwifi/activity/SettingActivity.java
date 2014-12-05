@@ -153,7 +153,8 @@ public class SettingActivity extends HeaderActivity implements OnClickListener {
 							RouterSetActivity.class));
 					break;
 				case 3:
-					agent.startFeedbackActivity();
+//					agent.startFeedbackActivity();
+					startActivity(new Intent(SettingActivity.this,FeedBackActivity.class));
 					break;
 				case 4:
 					checkUpdate();

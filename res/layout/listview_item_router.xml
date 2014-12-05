@@ -14,6 +14,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dip"
         android:scaleType="fitXY"
+        android:visibility="gone"
         android:src="@drawable/launcher" />
 
     <ImageView
@@ -26,7 +27,7 @@
         android:scaleType="fitXY"
         android:focusable="false"
         android:src="@drawable/checkedlist"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,8 +43,10 @@
             android:layout_height="wrap_content"
             android:textColor="#202020"
             android:text="t"
+            android:layout_marginLeft="5dp"
             android:textSize="18sp" />
-        <TextView
+
+        <TextView            android:layout_marginLeft="5dp"
             android:id="@+id/tvIPAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

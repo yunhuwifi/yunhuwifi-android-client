@@ -23,14 +23,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class WifiSetActivity extends BaseActivity implements
+public class WifiSetActivity extends HeaderActivity implements
 		OnCheckedChangeListener, OnClickListener {
 	private ToggleButton wifiswitch;
 	private EditText txtSsid;
 	private EditText txtPassword;
 	private Button btnWifi;
-	private ImageView header_btnLeft, header_btnRight;
-	private TextView txtEncryption, header_txtView,txthigh,txtlow,txtmiddle;
+	private TextView txtEncryption,txthigh,txtlow,txtmiddle;
 	private RouterWifiViewModel model;
 	private RouterModuleWifi wifiModule;
 	private LinearLayout safe;
@@ -38,7 +37,17 @@ public class WifiSetActivity extends BaseActivity implements
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_wifi_setting);
+		setContentLayout(R.layout.activity_wifi_setting);
+		this.setLeftImageVisible(true);
+		this.setHeaderText("无线设置");
+		this.setRightImageVisible(false);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		initView();
 		Bundle bundle = getIntent().getExtras();
 		model = (RouterWifiViewModel) bundle.getSerializable("model");
@@ -48,12 +57,6 @@ public class WifiSetActivity extends BaseActivity implements
 	}
 
 	private void initView() {
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("无线设置");
-		header_btnLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_btnRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_btnLeft.setOnClickListener(this);
-		header_btnRight.setVisibility(View.INVISIBLE);
 		wifiswitch = (ToggleButton) findViewById(R.id.wifiswitch); // 获取到控件
 		wifiswitch.setOnCheckedChangeListener(this);// 添加监听事件
 		txtSsid = (EditText) findViewById(R.id.txtSsid);

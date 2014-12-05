@@ -12,31 +12,30 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class LanActivity extends BaseActivity implements OnClickListener {
+public class LanActivity extends HeaderActivity implements OnClickListener {
 
 	private ToggleButton tbDHCP;
 	private EditText txtIPAddress;
-	private TextView header_txtView;
-	private ImageView header_btnLeft, header_btnRight;
 	private RouterModuleNetwork network;
 	private Dialog loading;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_lan_setting);
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("内网设置");
-		header_btnLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_btnRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_btnLeft.setOnClickListener(this);
-		header_btnRight.setVisibility(View.INVISIBLE);
+		setContentLayout(R.layout.activity_lan_setting);
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(false);
+		this.setHeaderText("内网设置");
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		findViewById(R.id.btnLan).setOnClickListener(this);
 		tbDHCP = (ToggleButton) findViewById(R.id.dhpnSwitch);
 		txtIPAddress = (EditText) findViewById(R.id.txtIPAddress);
@@ -100,9 +99,6 @@ public class LanActivity extends BaseActivity implements OnClickListener {
 				}
 
 			});
-			break;
-		case R.id.header_ivLeft:
-			finish();
 			break;
 		}
 	}

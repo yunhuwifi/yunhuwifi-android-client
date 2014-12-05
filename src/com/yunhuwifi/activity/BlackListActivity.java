@@ -15,17 +15,13 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
-public class BlackListActivity extends BaseActivity implements OnClickListener, OnRefreshListioner {
+public class BlackListActivity extends HeaderActivity implements  OnRefreshListioner {
 	private PullDownListView pullList;
 	private ListView lvBlackList;
 	private ListViewAdapter adapter;
 	private List<ListViewItem> listData = new ArrayList<ListViewItem>();
-	private ImageView header_ivLeft, header_ivRight;
 	Handler handler = new Handler() ;
 	public void handleMessage(android.os.Message msg) {
 		if (msg.what == 1) {
@@ -35,14 +31,17 @@ public class BlackListActivity extends BaseActivity implements OnClickListener, 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_blacklist);
-		TextView headerText = (TextView) findViewById(R.id.header_txtView);
-		header_ivLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight = (ImageView) findViewById(R.id.header_ivRight);
-		this.header_ivRight.setVisibility(View.INVISIBLE);
-		header_ivLeft.setOnClickListener(this);
-		headerText.setText("黑名单");
-//		this.lvBlackList = (ListView) findViewById(R.id.lvBlackList);
+		setContentLayout(R.layout.activity_blacklist);
+		this.setHeaderText("黑名单");
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(false);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		pullList=(PullDownListView) findViewById(R.id.pullBlackList);
 		pullList.setRefreshListioner(this);
 		lvBlackList=pullList.mListView;
@@ -58,12 +57,6 @@ public class BlackListActivity extends BaseActivity implements OnClickListener, 
 		this.lvBlackList.setAdapter(adapter);
 	}
 
-	@Override
-	public void onClick(View v) {
-		if (v.getId() == R.id.header_ivLeft) {
-			finish();
-		}
-	}
 	@Override
 	public void onRefresh() {
 		handler.postDelayed(new Runnable() {

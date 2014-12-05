@@ -19,10 +19,13 @@ import com.yunhuwifi.activity.R;
 import com.yunhuwifi.models.NotinstallItem;
 import com.yunhuwifi.view.ListViewAdapter;
 import com.yunhuwifi.view.ListViewItem;
+import com.yunhuwifi.view.PullDownListView;
+import com.yunhuwifi.view.PullDownListView.OnRefreshListioner;
 
-public class NotinstallFragment extends Fragment{
+public class NotinstallFragment extends Fragment implements OnRefreshListioner{
 	private ListView lvapps; 
 	private List<ListViewItem> listNotinstall;
+	private PullDownListView pullnotinstall;
 	ListViewAdapter adapter ;
 	Handler handler = new Handler() ;
 	public void handleMessage(android.os.Message msg) {
@@ -33,7 +36,8 @@ public class NotinstallFragment extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_notinstallapp, container, false);
-		lvapps = (ListView) view.findViewById(R.id.lvApp);
+		pullnotinstall=(PullDownListView) view.findViewById(R.id.pullnotinstall);
+		lvapps =pullnotinstall.mListView; 
 		init();
 		return view;
 	}
@@ -68,6 +72,18 @@ public class NotinstallFragment extends Fragment{
 				
 			}
 		});
+	}
+	@Override
+	public void onRefresh() {
+		handler.postDelayed(new Runnable() {
+			
+			@Override
+			public void run() {
+				pullnotinstall.onRefreshComplete();
+				adapter.notifyDataSetChanged();
+			}
+		}, 1500);
+		
 	}
 	
 

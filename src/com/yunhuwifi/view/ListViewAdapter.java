@@ -3,7 +3,6 @@ package com.yunhuwifi.view;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -16,7 +15,6 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.yunhuwifi.activity.R;
@@ -308,7 +306,6 @@ public class ListViewAdapter extends BaseAdapter {
 		CheckBox checkview; 
 	}
 	
-	@SuppressLint("ResourceAsColor")
 	public class MyLister implements OnClickListener{
 		
 		private int po;
@@ -321,7 +318,8 @@ public class ListViewAdapter extends BaseAdapter {
 			if(v.getId()==holder.operationview.getId()){
 				holder.operationview.setBackgroundResource(R.drawable.continueicon);
 				holder.stateView.setText("已暂停");
-				holder.stateView.setTextColor(R.color.changetxtcolor);
+				holder.stateView.setTextColor(R.color.itemlefttoptext);
+				holder.percentView.setTextColor(R.color.itemlefttoptext);
 			}
 			
 		}

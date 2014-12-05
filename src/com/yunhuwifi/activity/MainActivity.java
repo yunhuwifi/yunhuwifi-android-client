@@ -5,7 +5,6 @@ import com.yunhuwifi.RouterContext;
 import com.yunhuwifi.UserContext;
 import com.yunhuwifi.YunhuApplication;
 
-import android.annotation.SuppressLint;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
-@SuppressLint("ResourceAsColor")
 @SuppressWarnings("deprecation")
 public class MainActivity extends TabActivity {
 	public static TabHost mTabHost;

@@ -4,17 +4,15 @@
     android:orientation="vertical"
     android:background="@color/white" >
 
-  
-
-      <ListView
-        android:id="@+id/lvApp"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+  	<com.yunhuwifi.view.PullDownListView 
+  	    android:id="@+id/pullnotinstall"
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="fill_parent"
         android:divider="#ffebebeb"
         android:dividerHeight="1dp"
         android:cacheColorHint="@android:color/transparent"
-        >
-    </ListView>
+       />
+		
      
 
 </LinearLayout>

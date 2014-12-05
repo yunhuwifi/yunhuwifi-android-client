@@ -5,20 +5,10 @@
     android:background="@color/white" 
     android:orientation="vertical" 
      xmlns:tools="http://schemas.android.com/tools"
-     tools:context=".SavePwdActivity">
- <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-    <include layout="@layout/header" />
-    </LinearLayout>
-<RelativeLayout
-            android:id="@+id/login_div"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-            android:background="@drawable/background_login_div_bg"
-            android:padding="15dip" >
+     tools:context=".SavePwdActivity"
+     android:layout_marginTop="20dp"
+     android:padding="20dp"
+     >
 
             <com.yunhuwifi.view.PasswordEditText
                 android:id="@+id/newpwd"
@@ -29,22 +19,22 @@
                 android:maxLength="20"
                 />
 
-<Button
-    android:id="@+id/savepwd"
-	style="@style/buttonPrimary"
-    android:layout_below="@+id/againpwd"
-    android:layout_marginTop="15dp"
-    android:text="保存密码" />
- <com.yunhuwifi.view.PasswordEditText
-                android:id="@+id/againpwd"
-                style="@style/normalEditText"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/icon_lock"
-                android:hint="请重复输入新密码"
-                  android:layout_below="@id/newpwd"
-                android:inputType="textPassword"
-                android:maxLength="20"
-              />
 
-</RelativeLayout>
+		 		<com.yunhuwifi.view.PasswordEditText
+		                android:id="@+id/againpwd"
+		                style="@style/normalEditText"
+		                android:layout_marginTop="10dp"
+		                android:drawableLeft="@drawable/icon_lock"
+		                android:hint="请重复输入新密码"
+		                  android:layout_below="@id/newpwd"
+		                android:inputType="textPassword"
+		                android:maxLength="20"
+		              />
+					 <Button
+			    android:id="@+id/savepwd"
+				style="@style/buttonPrimary"
+			    android:layout_below="@+id/againpwd"
+			    android:layout_marginTop="15dp"
+			    android:text="保存密码" />
+
 </LinearLayout>

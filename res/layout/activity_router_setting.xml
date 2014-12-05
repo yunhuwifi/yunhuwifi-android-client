@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/white" 
      xmlns:tools="http://schemas.android.com/tools"
      tools:context=".RouterSetActivity">
-     <LinearLayout 
-          android:id="@+id/layoutset"
-         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-         >
-	<include layout="@layout/header" />
-	</LinearLayout>
 	    <ListView
         android:id="@+id/lvRouterSet"
-        android:layout_below="@+id/layoutset"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:divider="#ffebebeb"
         android:dividerHeight="1dp"
@@ -23,7 +15,7 @@
         >
     	</ListView>
 
-</RelativeLayout>
+</LinearLayout>
 
 
 

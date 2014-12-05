@@ -23,10 +23,16 @@ public class DeviceRemarkActivity extends HeaderActivity {
 
 		super.onCreate(savedInstanceState);
 		setContentLayout(R.layout.activity_device_remark);
-
+		this.setRightImageVisible(false);
 		this.setHeaderText("修改备注");
 		this.setLeftImageVisible(true);
-
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		this.txtRemark = (ClearEditText) findViewById(R.id.txtRemark);
 		this.btnComplete = (Button) findViewById(R.id.btnComplete);
 		this.detail=getIntent().getExtras().getString(detail);

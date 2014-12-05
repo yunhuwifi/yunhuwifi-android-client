@@ -4,36 +4,31 @@ import com.yunhuwifi.activity.R;
 import com.yunhuwifi.fragment.AppPagerAdapter;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ExpandappActivity extends FragmentActivity {
+public class ExpandappActivity extends HeaderFragmentActivity {
 
 	private ViewPager vp_content;
-	private TextView tv_install, tv_notinstall, header_txtView;
+	private TextView tv_install, tv_notinstall;
 	private int selectID = 0;
-	private ImageView header_ivLeft, header_ivRight;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_appmain);
+		setContentLayout(R.layout.activity_appmain);
+		
+		this.setHeaderText("扩展应用");
+		this.setLeftImageVisible(false);
+		this.setRightImageVisible(false);
+		
 		findView();
 		init();
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("扩展应用");
-		header_ivLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_ivLeft.setVisibility(View.INVISIBLE);
-		header_ivRight.setVisibility(View.INVISIBLE);
 	}
 
 	private void findView() {
@@ -79,12 +74,10 @@ public class ExpandappActivity extends FragmentActivity {
 			@Override
 			public void onPageScrolled(int position, float positionOffset,
 					int positionOffsetPixels) {
-				// ignore
 			}
 
 			@Override
 			public void onPageScrollStateChanged(int state) {
-				// ignore
 			}
 		});
 

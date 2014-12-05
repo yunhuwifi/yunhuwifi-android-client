@@ -48,12 +48,10 @@ public class DeviceActivity extends HeaderActivity implements OnClickListener, O
 		super.onCreate(savedInstanceState);
 		setContentLayout(R.layout.activity_device);
 		this.setHeaderText("设备管理");
-
 		this.setLeftImageVisible(false);
 		this.setRightImageVisible(true);
-		this.ivRight.setBackgroundResource(R.drawable.blacklisticon);
+		this.ivRight.setImageResource(R.drawable.blacklisticon);
 		this.ivRight.setOnClickListener(this);
-//		this.lvdevice = (ListView) findViewById(R.id.lvDeivce);
 		pullList=(PullDownListView) findViewById(R.id.pullList);
 		pullList.setRefreshListioner(this);
 		lvdevice=pullList.mListView;

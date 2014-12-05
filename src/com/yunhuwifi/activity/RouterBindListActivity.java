@@ -66,7 +66,7 @@ public class RouterBindListActivity extends HeaderActivity {
 			public void onClick(View v) {
 				Intent intent = new Intent(RouterBindListActivity.this,
 						RouterBindActivity.class);
-				startActivityForResult(intent, REQUEST_CODE_BIND);
+//				startActivityForResult(intent, REQUEST_CODE_BIND);
 			}
 		});
 
@@ -116,7 +116,7 @@ public class RouterBindListActivity extends HeaderActivity {
 
 		if (getApplicationContext().getUserContext() == null) {
 			Intent intent = new Intent(this, LoginActivity.class);
-			startActivityForResult(intent, REQUEST_CODE_LOGIN);
+//			startActivityForResult(intent, REQUEST_CODE_LOGIN);
 		} else {
 			this.userContext = getApplicationContext().getUserContext();
 			loadRouter();
@@ -158,8 +158,8 @@ public class RouterBindListActivity extends HeaderActivity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == REQUEST_CODE_LOGIN && resultCode == RESULT_OK) {
+		/*if (requestCode == REQUEST_CODE_LOGIN && resultCode == RESULT_OK) {
 			this.loadRouter();
-		}
+		}*/
 	}
 }

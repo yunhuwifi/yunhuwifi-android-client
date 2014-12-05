@@ -17,38 +17,34 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class WanActivity extends FragmentActivity implements OnClickListener {
+public class WanActivity extends HeaderFragmentActivity implements OnClickListener {
 
 	private RelativeLayout layoutpppoe, layoutstaticip, layoutdhcp;
-	private ImageView imageView1, imageView2, imageView3,header_ivLeft, header_ivRight;
+	private ImageView imageView1, imageView2, imageView3;
 	private TextView textView1, textView2, textView3;
 	private ViewPager viewPager;
 	private int[] selectList;
 	private ImageView[] imageViewList;
 	private TextView[] textViewList;
 	private int selectID = 0;
-	private TextView header_txtView;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_wan_setting);
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("外网设置");
-		header_ivLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_ivLeft.setOnClickListener(new OnClickListener() {
+		setContentLayout(R.layout.activity_wan_setting);
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(false);
+		this.setHeaderText("外网设置");
+		this.ivLeft.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				finish();
 
 			}
 		});
-		header_ivRight.setVisibility(View.INVISIBLE);
 		initLayout();
 		initData();
 		initwan();

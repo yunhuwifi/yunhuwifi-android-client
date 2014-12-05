@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/empty_cart_view"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/white" >
 
-    <LinearLayout
-        android:id="@+id/top_relative"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-        <include layout="@layout/header" />
-    </LinearLayout>
 	<ListView 
             android:id="@+id/lvCommunications"
             android:divider="#ffebebeb"
-            android:layout_below="@+id/top_relative"
               android:layout_width="match_parent"
       		  android:layout_height="match_parent"
         	android:dividerHeight="1dp"
@@ -22,4 +15,4 @@
    
 </ListView>
 
-</RelativeLayout>
+</LinearLayout>

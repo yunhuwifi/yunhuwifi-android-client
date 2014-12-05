@@ -1,27 +1,27 @@
 package com.yunhuwifi.activity;
 
-import cn.smssdk.SMSSDK;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-public class ForgetPwdActivity extends BaseActivity implements OnClickListener {
-	private TextView header_txtView;
-	private ImageView header_btnLeft,header_btnRight;
+public class ForgetPwdActivity extends HeaderActivity implements OnClickListener {
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_forgetpwd);
-		header_txtView=(TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("忘记密码");
-		header_btnLeft=(ImageView) findViewById(R.id.header_ivLeft);
-		header_btnRight=(ImageView) findViewById(R.id.header_ivRight);
-		header_btnLeft.setOnClickListener(this);
-		header_btnRight.setVisibility(View.INVISIBLE);
+		setContentLayout(R.layout.activity_forgetpwd);
+		
+		this.setHeaderText("忘记密码");
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(false);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		
 		findViewById(R.id.backpwd).setOnClickListener(this);
 		findViewById(R.id.txtchange).setOnClickListener(this);
 
@@ -38,9 +38,6 @@ public class ForgetPwdActivity extends BaseActivity implements OnClickListener {
 		case R.id.txtchange:
 			break;
 			
-		case R.id.header_ivLeft:
-			finish();
-			break;
 		}
 
 	}

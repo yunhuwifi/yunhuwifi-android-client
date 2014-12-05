@@ -68,7 +68,6 @@ public class StateActivity extends BaseFragmentActivity implements OnClickListen
 		pullList=(PullDownListView) findViewById(R.id.pulllist);
 		pullList.setRefreshListioner(this);
 		lvState=pullList.mListView;
-//		lvState=(ListView) findViewById(R.id.lvState);
 		btndeleted=(Button) findViewById(R.id.btndeleted);
 		btncancel=(Button) findViewById(R.id.btncancel);
 		radiobtnall=(RadioButton) findViewById(R.id.radiobtnall);

@@ -11,13 +11,11 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.foxrouter.api.model.RouterDevice;
 import com.yunhuwifi.activity.R;
 import com.yunhuwifi.models.CallLogs;
 import com.yunhuwifi.models.ContactInfo;
 import com.yunhuwifi.models.RouterSet;
 import com.yunhuwifi.service.ExportSmsXml;
-import com.yunhuwifi.util.CustomDialog;
 import com.yunhuwifi.util.FileUtil;
 import com.yunhuwifi.util.ImageTools;
 import com.yunhuwifi.vcard.ContactStruct;
@@ -46,17 +44,11 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class SynchronousCommunicationActivity extends BaseActivity implements
-		OnClickListener {
+public class SynchronousCommunicationActivity extends HeaderActivity  {
 	private static final int SCALE = 5;// 照片缩小比例
-	private TextView header_txtView;
-	private ImageView header_ivLeft, header_ivRight;
 	private ListView lvCommunications;
 	private List<ListViewItem> data = new ArrayList<ListViewItem>();
 	private ListViewAdapter adapter;
@@ -72,13 +64,17 @@ public class SynchronousCommunicationActivity extends BaseActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_synchronous_communication);
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("同步通讯");
-		header_ivLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_ivLeft.setOnClickListener(this);
-		header_ivRight.setVisibility(View.INVISIBLE);
+		setContentLayout(R.layout.activity_synchronous_communication);
+		this.setHeaderText("同步通讯");
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(false);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		lvCommunications = (ListView) findViewById(R.id.lvCommunications);
 		initdata();
 	}
@@ -281,16 +277,6 @@ public class SynchronousCommunicationActivity extends BaseActivity implements
 
 	}
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-
-		case R.id.header_ivLeft:
-			finish();
-			break;
-		}
-
-	}
 
 	public void showPicker(Context context) {
 		final Dialog dlg = new Dialog(this);

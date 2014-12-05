@@ -6,14 +6,6 @@
      tools:context=".ExpandActivity">
 
     <LinearLayout
-        android:id="@+id/rl_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <include layout="@layout/header" />
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/ll_index_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

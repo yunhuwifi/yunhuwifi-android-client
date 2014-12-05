@@ -8,16 +8,11 @@
    <com.yunhuwifi.view.PullDownListView
         android:id="@+id/pullList"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    <ListView
-        android:id="@+id/lvDeivce"
+        android:layout_height="fill_parent" 
              android:divider="#ffebebeb"
         	android:dividerHeight="1dp"
         	android:cacheColorHint="@android:color/transparent"
         	 android:drawSelectorOnTop="false"
             android:fadingEdgeLength="0.0sp"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    </ListView>
-</com.yunhuwifi.view.PullDownListView>
+	/>
 </LinearLayout>

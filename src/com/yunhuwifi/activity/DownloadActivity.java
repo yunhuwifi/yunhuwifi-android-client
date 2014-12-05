@@ -2,45 +2,47 @@ package com.yunhuwifi.activity;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.yunhuwifi.fragment.DownloadPagerAdapter;
-import com.yunhuwifi.fragment.DownloadedFragment;
 
 
-public class DownloadActivity extends FragmentActivity {
+public class DownloadActivity extends HeaderFragmentActivity {
 
 	private ViewPager vp_file; 
-	private TextView tvdownloaded,tvnotdownload, header_txtView;
+	private TextView tvdownloaded,tvnotdownload;
 	private int selectID = 0;
-	private ImageView header_ivLeft, header_ivRight;
 	private String link="";
 	public static boolean operateVisible=false;
 	
 
-	private String selected=DownloadedFragment.tvSelected;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_download);
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		if(selected==""){
-			header_txtView.setText("下载管理");
-		}else{
-			header_txtView.setText(selected);
-		}
-		header_ivLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_ivRight.setImageResource(R.drawable.addicon);
-		header_ivLeft.setOnClickListener(listener);
-		header_ivRight.setOnClickListener(listener);
+		setContentLayout(R.layout.activity_download);
+		this.setHeaderText("下载管理");
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(true);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		this.ivRight.setImageResource(R.drawable.addicon);
+		this.ivRight.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				popupaddlink();
+			}
+		});
 		findView();
 		init();
 	}
@@ -72,13 +74,6 @@ public class DownloadActivity extends FragmentActivity {
 					setCurrentPage(1);
 					vp_file.setCurrentItem(1);
 				}
-				break;
-			case R.id.header_ivLeft:
-					finish();
-				break;
-			case R.id.header_ivRight:
-				
-					popupaddlink();
 				break;
 			}
 		}

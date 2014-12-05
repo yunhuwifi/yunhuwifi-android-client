@@ -141,21 +141,16 @@
 			 		    </LinearLayout>
 			 		</LinearLayout>
 					  <com.yunhuwifi.view.PullDownListView
+					
 					     android:id="@+id/pulllist"
 					         android:layout_width="fill_parent"
 					        android:layout_height="fill_parent" 
-					      >
-				        
-							 <ListView
-						            android:id="@+id/lvState"
-						            android:layout_width="match_parent"
-						            android:layout_height="wrap_content"
+						          
 						            android:divider="@drawable/mainline"
 						            android:cacheColorHint="@android:color/transparent"
 						            android:layout_marginTop="10dp"
-						            android:dividerHeight="1dp" >
-						        </ListView>
-				        </com.yunhuwifi.view.PullDownListView>
+						            android:dividerHeight="1dp" />
+					
 			       </LinearLayout>
        
             

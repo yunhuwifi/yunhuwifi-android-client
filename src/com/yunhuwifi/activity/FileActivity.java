@@ -3,38 +3,49 @@ package com.yunhuwifi.activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yunhuwifi.fragment.FilePagerAdapter;
 
 
-public class FileActivity extends FragmentActivity {
+public class FileActivity extends HeaderFragmentActivity {
 
 	private ViewPager vp_file; 
-	private TextView tv_storage, tv_skydrive, header_txtView;
+	private TextView tv_storage, tv_skydrive;
 	private int selectID = 0;
-	private ImageView header_ivLeft, header_ivRight;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_file);
+		setContentLayout(R.layout.activity_file);
+		
+		this.setHeaderText("存储管理");
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(true);
+		this.ivRight.setImageResource(R.drawable.downicon);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		this.ivRight.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(FileActivity.this,DownloadActivity.class));
+			}
+		});
+		
+		
 		findView();
 		init();
-		header_txtView = (TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("存储管理");
-		header_ivLeft = (ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight = (ImageView) findViewById(R.id.header_ivRight);
-		header_ivRight.setImageResource(R.drawable.downicon);
-		header_ivLeft.setOnClickListener(listener);
-		header_ivRight.setOnClickListener(listener);
 	}
 
 	
@@ -66,11 +77,6 @@ public class FileActivity extends FragmentActivity {
 					vp_file.setCurrentItem(1);
 				}
 				break;
-			case R.id.header_ivLeft:
-				finish();
-				break;
-			case R.id.header_ivRight:
-				startActivity(new Intent(FileActivity.this,DownloadActivity.class));
 			}
 		}
 	};

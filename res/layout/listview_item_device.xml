@@ -51,7 +51,7 @@
 			              android:layout_alignParentRight="true"
 			               android:layout_centerVertical="true"
 			              android:focusable="false"
-			              android:layout_marginRight="5dp"
+			              android:layout_marginRight="15dp"
 			              android:textColor="@color/white"
 			              android:text="定时"
 			              android:src="@drawable/nexticon" />

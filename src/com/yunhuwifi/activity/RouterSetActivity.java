@@ -16,15 +16,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class RouterSetActivity extends BaseActivity implements OnClickListener {
-	private TextView header_txtView;
-	private ImageView header_ivLeft,header_ivRight;
+public class RouterSetActivity extends HeaderActivity {
 	private ListView lvRouterSet;
 	private List<ListViewItem> data=new ArrayList<ListViewItem>();
 	private ListViewAdapter adapter;
@@ -38,12 +33,16 @@ public class RouterSetActivity extends BaseActivity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_router_setting);
-		header_txtView=(TextView) findViewById(R.id.header_txtView);
-		header_txtView.setText("路由器设置");
-		header_ivLeft=(ImageView) findViewById(R.id.header_ivLeft);
-		header_ivRight=(ImageView) findViewById(R.id.header_ivRight);
-		header_ivLeft.setOnClickListener(this);
-		header_ivRight.setVisibility(View.INVISIBLE);
+		this.setHeaderText("路由器设置");
+		this.setLeftImageVisible(true);
+		this.setRightImageVisible(false);
+		this.ivLeft.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		lvRouterSet=(ListView) findViewById(R.id.lvRouterSet);
 		initdata();
 	}
@@ -123,15 +122,7 @@ public class RouterSetActivity extends BaseActivity implements OnClickListener {
 	}
 
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.header_ivLeft:
-			finish();
-			break;
-		}
 
-	}
 	
 
 
