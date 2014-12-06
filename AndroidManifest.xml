@@ -155,6 +155,7 @@
         <activity android:name="com.yunhuwifi.activity.WizardWifiSetActivity" />
         <activity android:name="com.yunhuwifi.activity.WizardPPOEActivity" />
         <activity android:name="com.yunhuwifi.activity.WizardManagePwdSetActivity" />
+        <activity android:name="com.yunhuwifi.activity.FeedBackActivity" />
         
         <activity
             android:name="com.yunhuwifi.activity.ExitActivity"
