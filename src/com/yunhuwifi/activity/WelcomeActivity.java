@@ -75,32 +75,26 @@ public class WelcomeActivity extends BaseActivity implements AnimationListener {
 							Log.d("result", t.toString());
 							if (t.isResult()) {
 								if(t.isBootResult()){
-									startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+									startActivity(new Intent(WelcomeActivity.this,WizardTestActivity.class));
 									finish();
 								}else{
-//									startActivity(new Intent(WelcomeActivity.this,WizardTestActivity.class));
-//									loginRouterAccount();
+									loginRouterAccount();
 								}
 							} else {
-								startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
-//								loginRouterAccount();
-//								loginWithYunhuAccount(null);
+								loginWithYunhuAccount(null);
 							}
 						}
 
 						@Override
 						public void onFailure(Throwable t, int errorNo,
 								String strMsg) {
-							startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
-//							 loginWithYunhuAccount(null);
-//							startActivity(new Intent(WelcomeActivity.this,NotConnectActivity.class));
+							startActivity(new Intent(WelcomeActivity.this,NotConnectActivity.class));
 							finish();
 						}
 
 					});
 		} catch (NetworkErrorException e) {
-			startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
-//			startActivity(new Intent(WelcomeActivity.this,NotConnectActivity.class));
+			startActivity(new Intent(WelcomeActivity.this,NotConnectActivity.class));
 			finish();
 		}
 	}
