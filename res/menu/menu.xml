@@ -6,5 +6,10 @@
 			android:icon="@drawable/newfilepressed"
 			android:title="新建文件夹"
 		    />
+		    <item
+		     android:id="@+id/menuupload"
+			android:icon="@drawable/newfilepressed"
+			android:title="上传到路由器"
+		    />
 </menu>
 	
