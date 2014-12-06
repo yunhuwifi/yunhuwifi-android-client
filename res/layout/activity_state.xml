@@ -141,15 +141,18 @@
 			 		    </LinearLayout>
 			 		</LinearLayout>
 					  <com.yunhuwifi.view.PullDownListView
-					
-					     android:id="@+id/pulllist"
-					         android:layout_width="fill_parent"
-					        android:layout_height="fill_parent" 
-						          
+							         android:layout_width="fill_parent"
+							        android:layout_height="fill_parent"
+					     			android:id="@+id/pulllist"
+					         >
+			 		<ListView
+							         android:layout_width="fill_parent"
+							        android:layout_height="fill_parent"
 						            android:divider="@drawable/mainline"
 						            android:cacheColorHint="@android:color/transparent"
 						            android:layout_marginTop="10dp"
 						            android:dividerHeight="1dp" />
+						            </com.yunhuwifi.view.PullDownListView>
 					
 			       </LinearLayout>
        

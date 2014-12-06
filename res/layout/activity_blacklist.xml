@@ -12,9 +12,13 @@
 		<com.yunhuwifi.view.PullDownListView 
 		    android:id="@+id/pullBlackList"
 		     android:layout_width="fill_parent"
+		        android:layout_height="fill_parent">
+		        <ListView
+		            android:layout_width="fill_parent"
 		        android:layout_height="fill_parent"
 		            android:divider="#ffebebeb"
 		        	android:dividerHeight="1dp"
 		        	android:cacheColorHint="@android:color/transparent"
 		           />
+		        </com.yunhuwifi.view.PullDownListView>
 </LinearLayout>

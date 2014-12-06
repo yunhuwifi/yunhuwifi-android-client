@@ -6,13 +6,7 @@
     android:orientation="vertical" 
      xmlns:tools="http://schemas.android.com/tools"
      tools:context=".ForgetPwdActivity">
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-    <include layout="@layout/header" />
-    </LinearLayout>
-<RelativeLayout
+	<RelativeLayout
             android:id="@+id/login_div"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
