@@ -30,7 +30,7 @@ public class DownloadsFragment extends Fragment {
 	private ListView lvnotdownload;
 	private List<ListViewItem> listData;
 	private ListViewAdapter adapter;
-	
+	private final int DOWNLOAD=8;
 	public Handler handler=new Handler();
 	public void handleMessage(android.os.Message msg){
 		if(msg.what==1){
@@ -91,7 +91,7 @@ public class DownloadsFragment extends Fragment {
 		listData.add(download4);
 		
 		
-		adapter=new ListViewAdapter(getActivity(), listData, 1, handler);
+		adapter=new ListViewAdapter(getActivity(), listData,DOWNLOAD, handler);
 		lvnotdownload.setAdapter(adapter);
 		lvnotdownload.setOnItemClickListener(new OnItemClickListener() {
 

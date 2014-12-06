@@ -26,7 +26,8 @@ import android.widget.Toast;
 import android.widget.ListView;
 
 public class WifiListActivity extends HeaderActivity {
-
+	
+	private final int WIFI=7;
 	private ListView lvWifi;
 	private ListViewAdapter adapter;
 	private List<ListViewItem> list;
@@ -43,7 +44,7 @@ public class WifiListActivity extends HeaderActivity {
 		setContentLayout(R.layout.activity_wifi_list);
 		this.list = new ArrayList<ListViewItem>();
 		this.lvWifi = (ListView) findViewById(R.id.lvWifi);
-		this.adapter = new ListViewAdapter(this.getApplicationContext(), list,3,handler);
+		this.adapter = new ListViewAdapter(this.getApplicationContext(), list,WIFI,handler);
 		this.lvWifi.setAdapter(adapter);
 		this.setLeftImageVisible(true);
 		this.setHeaderText("无线");

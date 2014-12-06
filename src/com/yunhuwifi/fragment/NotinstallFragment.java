@@ -23,6 +23,7 @@ import com.yunhuwifi.view.PullDownListView;
 import com.yunhuwifi.view.PullDownListView.OnRefreshListioner;
 
 public class NotinstallFragment extends Fragment implements OnRefreshListioner{
+	private final int APP=2;
 	private ListView lvapps; 
 	private List<ListViewItem> listNotinstall;
 	private PullDownListView pullnotinstall;
@@ -54,7 +55,7 @@ public class NotinstallFragment extends Fragment implements OnRefreshListioner{
 		 listNotinstall.add(item2);
 		 listNotinstall.add(item1);
 
-		 adapter = new ListViewAdapter(getActivity(), listNotinstall, 6,handler);
+		 adapter = new ListViewAdapter(getActivity(), listNotinstall,APP,handler);
 		lvapps.setAdapter(adapter);
 		lvapps.setOnItemClickListener(new OnItemClickListener() {
 

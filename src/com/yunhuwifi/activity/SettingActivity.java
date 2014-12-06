@@ -8,7 +8,6 @@ import com.yunhuwifi.activity.R;
 import com.yunhuwifi.models.RouterSet;
 import com.yunhuwifi.view.ListViewAdapter;
 import com.yunhuwifi.view.ListViewItem;
-import com.umeng.fb.FeedbackAgent;
 import com.umeng.update.UmengUpdateAgent;
 import com.umeng.update.UmengUpdateListener;
 import com.umeng.update.UpdateResponse;
@@ -28,7 +27,8 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 
 public class SettingActivity extends HeaderActivity implements OnClickListener {
-	FeedbackAgent agent;
+//	FeedbackAgent agent;
+	private final int SET=3;
 	private ListView lvSet;
 	private List<ListViewItem> data = new ArrayList<ListViewItem>();;
 	private ListViewAdapter adapter;
@@ -46,8 +46,8 @@ public class SettingActivity extends HeaderActivity implements OnClickListener {
 		this.setHeaderText("设置");
 		this.setLeftImageVisible(false);
 
-		agent = new FeedbackAgent(this);
-		agent.sync();
+//		agent = new FeedbackAgent(this);
+//		agent.sync();
 		lvSet = (ListView) findViewById(R.id.lvSet);
 
 		/*
@@ -128,7 +128,7 @@ public class SettingActivity extends HeaderActivity implements OnClickListener {
 		data.add(item4);
 		data.add(item5);
 		
-		adapter = new ListViewAdapter(getApplicationContext(), data,7,handler);
+		adapter = new ListViewAdapter(getApplicationContext(), data,SET,handler);
 		lvSet.setAdapter(adapter);
 		lvSet.setOnItemClickListener(new OnItemClickListener() {
 			@Override

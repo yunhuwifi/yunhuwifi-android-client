@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
 public class DownloadedFragment extends Fragment {
+	private final int FILE=4;
 	private ListView lvdownloaded;
 	private List<ListViewItem> listData;
 	private ListViewAdapter adapter;
@@ -52,7 +53,7 @@ public class DownloadedFragment extends Fragment {
 		item2.setMsg("飞虎2" );
 		listData.add(item2);
 		listData.add(item1);
-		adapter=new ListViewAdapter(getActivity(), listData,5,handler);
+		adapter=new ListViewAdapter(getActivity(), listData,FILE,handler);
 		lvdownloaded.setAdapter(adapter);
 		lvdownloaded.setOnItemClickListener(new OnItemClickListener() {
 

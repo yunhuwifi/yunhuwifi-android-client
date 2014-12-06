@@ -20,6 +20,15 @@ import android.widget.ToggleButton;
 import com.yunhuwifi.activity.R;
 
 public class ListViewAdapter extends BaseAdapter { 
+	private final int STATE=0;
+	private final int DEVICE=1;
+	private final int APP=2;
+	private final int SET=3;
+	private final int FILE=4;
+	private final int BLACKLIST=5;
+	private final int ROUTER=6;
+	private final int WIFI=7;
+	private final int DOWNLOAD=8;
 	private List<ListViewItem> listData;
 	private LayoutInflater inflater;
 	public static boolean visable = false;
@@ -27,7 +36,7 @@ public class ListViewAdapter extends BaseAdapter {
 	private int switchType; 
 	private Context context;
 	private ListViewItemViewHolder holder=null;
-		private Handler handler;
+	private Handler handler;
 	public ListViewAdapter(Context context, List<ListViewItem> listState, int switchType,Handler handler) {
 		super();
 		this.context=context;
@@ -63,7 +72,7 @@ public class ListViewAdapter extends BaseAdapter {
 		if (convertView == null) {
 			switch(switchType){
 			
-			case 0:
+			case STATE:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_state, null);
 				holder.titleView = (TextView) convertView
@@ -76,7 +85,7 @@ public class ListViewAdapter extends BaseAdapter {
 				
 				break;
 			
-			case 1:
+			case DOWNLOAD:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_download, null);
 				holder.stateView = (TextView) convertView
@@ -98,20 +107,20 @@ public class ListViewAdapter extends BaseAdapter {
 				convertView.setTag(holder);
 				
 				break;
-			case 2:
+			case BLACKLIST:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_blacklist, null);
 				holder.titleView = (TextView) convertView
 						.findViewById(R.id.tvalineTitle);
-				holder.bitmapView = (ImageView) convertView
-						.findViewById(R.id.imgalineIcon);
-				holder.checkview = (CheckBox) convertView
-						.findViewById(R.id.cbaline);
+//				holder.bitmapView = (ImageView) convertView
+//						.findViewById(R.id.imgalineIcon);
+//				holder.checkview = (CheckBox) convertView
+//						.findViewById(R.id.cbaline);
 				holder.operationview=convertView.findViewById(R.id.btnaline);
 				convertView.setTag(holder);
 				
 				break;
-			case 3:
+			case WIFI:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_wifi, null);
 					holder.titleView = (TextView) convertView
@@ -122,7 +131,7 @@ public class ListViewAdapter extends BaseAdapter {
 					convertView.setTag(holder);
 				
 				break;
-			case 4:
+			case DEVICE:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_device, null);
 					holder.titleView = (TextView) convertView
@@ -135,18 +144,18 @@ public class ListViewAdapter extends BaseAdapter {
 					convertView.setTag(holder);
 				
 				break;
-			case 5:
+			case FILE:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_file, null);
 					holder.titleView = (TextView) convertView.findViewById(R.id.tvFileTitle);
 					holder.sizeView = (TextView) convertView.findViewById(R.id.tvFileSize);
 					holder.bitmapView = (ImageView) convertView.findViewById(R.id.ivfile);
-					holder.checkview = (CheckBox) convertView.findViewById(R.id.cbFile);
+//					holder.checkview = (CheckBox) convertView.findViewById(R.id.cbFile);
 					convertView.setTag(holder);
 			
 				break;
 			
-			case 6:
+			case APP:
 				
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_notinstallapp, null);
@@ -160,7 +169,7 @@ public class ListViewAdapter extends BaseAdapter {
 					convertView.setTag(holder);
 				break;
 			
-			case 7:
+			case SET:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_set, null);
 					holder.titleView = (TextView) convertView
@@ -171,7 +180,7 @@ public class ListViewAdapter extends BaseAdapter {
 					convertView.setTag(holder);
 				break;
 			
-			case 8:
+			case ROUTER:
 					holder = new ListViewItemViewHolder();
 					convertView = inflater.inflate(R.layout.listview_item_router, null);
 					holder.titleView = (TextView) convertView
@@ -190,7 +199,7 @@ public class ListViewAdapter extends BaseAdapter {
 		
 	}
 		switch(switchType){
-			case 0:
+			case STATE:
 				ListViewItem item0 = listData.get(position);
 				holder.titleView.setText(item0.getTitle());
 				holder.timeView.setText(item0.getDate());
@@ -213,7 +222,7 @@ public class ListViewAdapter extends BaseAdapter {
 					}
 				});
 			break;
-			case 1:
+			case DOWNLOAD:
 				 
 				ListViewItem item1 = listData.get(position);
 				holder.bitmapView.setImageBitmap((item1.getBitmap()));
@@ -225,14 +234,14 @@ public class ListViewAdapter extends BaseAdapter {
 				holder.pbView.setProgress(item1.getProgress());
 				holder.operationview.setOnClickListener(new MyLister(position));
 				break;
-			case 2:
+			case BLACKLIST:
 				 
 				ListViewItem item2 = listData.get(position);
-				holder.bitmapView.setImageBitmap((item2.getBitmap()));
+//				holder.bitmapView.setImageBitmap((item2.getBitmap()));
 				holder.titleView.setText(item2.getTitle());
 				
 				break;
-			case 3:
+			case WIFI:
 				ListViewItem item3 = listData.get(position);
 //				holder.bitmapView.setImageBitmap((item.getBitmap()));
 				holder.titleView.setText(item3.getTitle());
@@ -246,20 +255,20 @@ public class ListViewAdapter extends BaseAdapter {
 					}
 				});
 				break;
-			case 4:
+			case DEVICE:
 				ListViewItem item4 = listData.get(position); 
 //				holder.bitmapView.setImageBitmap((item.getBitmap()));
 				holder.titleView.setText(item4.getTitle());
 				holder.descriptionView.setText(item4.getSpeed());
 				break;
-			case 5:
+			case FILE:
 				ListViewItem item5 = listData.get(position);
 				holder.titleView.setText(item5.getTitle());
 				/*holder.bitmapView.setImageBitmap((item5.getBitmap()));
 				holder.sizeView.setText(item5.getSize());
 				holder.timeView.setText(item5.getSpeed());*/
 				break;
-			case 6:
+			case APP:
 				ListViewItem item6 = listData.get(position); 
 //				holder.bitmapView.setImageBitmap((item6.getBitmap()));
 				holder.titleView.setText(item6.getTitle());
@@ -275,17 +284,16 @@ public class ListViewAdapter extends BaseAdapter {
 					}
 				});
 				break;
-			case 7:
+			case SET:
 				ListViewItem item7 = listData.get(position);
 				holder.bitmapView.setImageBitmap((item7.getBitmap()));
 				holder.titleView.setText(item7.getTitle());
 				break;
-			case 8:
+			case ROUTER:
 				ListViewItem item8 = listData.get(position);
 				holder.bitmapView.setImageBitmap((item8.getBitmap()));
 				holder.titleView.setText(item8.getTitle());
 				holder.descriptionView.setText(item8.getSize());
-				holder.timeView.setText(item8.getSpeed());
 				break;
 			
 		}

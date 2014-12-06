@@ -32,7 +32,7 @@ public class RouterBindListActivity extends HeaderActivity {
 	private ListViewAdapter adapter;
 	private List<ListViewItem> dataList = new ArrayList<ListViewItem>();
 	private UserContext userContext;
-
+	private final int ROUTER=6;
 	private final static int REQUEST_CODE_LOGIN = 0;
 	private final static int REQUEST_CODE_BIND = 1;
 	private Dialog loading;
@@ -66,13 +66,14 @@ public class RouterBindListActivity extends HeaderActivity {
 			public void onClick(View v) {
 				Intent intent = new Intent(RouterBindListActivity.this,
 						RouterBindActivity.class);
+				startActivity(intent);
 //				startActivityForResult(intent, REQUEST_CODE_BIND);
 			}
 		});
 
 		this.lvBindRouter = (ListView) findViewById(R.id.lvBindRouter);
 		this.adapter = new ListViewAdapter(this.getApplicationContext(),
-				dataList,8,handler);
+				dataList,ROUTER,handler);
 
 		this.lvBindRouter.setAdapter(this.adapter);
 

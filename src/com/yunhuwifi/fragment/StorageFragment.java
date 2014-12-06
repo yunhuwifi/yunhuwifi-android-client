@@ -61,7 +61,7 @@ public class StorageFragment extends Fragment {
 	    	default :
 	    		break;
 	    	}
-			return false;
+			return super.onOptionsItemSelected(item);
 	    	
 	    }
 	
