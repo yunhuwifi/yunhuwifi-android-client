@@ -20,6 +20,7 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class RouterSetActivity extends HeaderActivity {
+	private final int SET=3;
 	private ListView lvRouterSet;
 	private List<ListViewItem> data=new ArrayList<ListViewItem>();
 	private ListViewAdapter adapter;
@@ -32,7 +33,7 @@ public class RouterSetActivity extends HeaderActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_router_setting);
+		setContentLayout(R.layout.activity_router_setting);
 		this.setHeaderText("路由器设置");
 		this.setLeftImageVisible(true);
 		this.setRightImageVisible(false);
@@ -82,7 +83,7 @@ public class RouterSetActivity extends HeaderActivity {
 		data.add(item6);
 		
 		
-		 adapter=new ListViewAdapter(getApplicationContext(), data,7,handler);
+		 adapter=new ListViewAdapter(getApplicationContext(), data,SET,handler);
 			lvRouterSet.setAdapter(adapter);
 			lvRouterSet.setOnItemClickListener(new OnItemClickListener() {
 				@Override

@@ -81,7 +81,8 @@ public class WelcomeActivity extends BaseActivity implements AnimationListener {
 									loginRouterAccount();
 								}
 							} else {
-								loginWithYunhuAccount(null);
+								loginRouterAccount();
+//								loginWithYunhuAccount(null);
 							}
 						}
 
