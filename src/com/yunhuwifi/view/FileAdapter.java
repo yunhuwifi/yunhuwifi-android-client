@@ -59,8 +59,8 @@ public class FileAdapter extends BaseAdapter{
         if (null == convertView){
             convertView = inflater.inflate(R.layout.listview_item_file, null);
             holder = new ViewHolder();
-            holder.text = (TextView)convertView.findViewById(R.id.tvFileTitle);
-            holder.image = (ImageView)convertView.findViewById(R.id.ivfile);
+            holder.text = (TextView)convertView.findViewById(R.id.tvTitle);
+            holder.image = (ImageView)convertView.findViewById(R.id.ivIcon);
             
             convertView.setTag(holder);
         }
