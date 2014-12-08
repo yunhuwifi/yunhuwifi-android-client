@@ -16,8 +16,8 @@
 		          <LinearLayout
 		              android:layout_width="match_parent"
 		              android:layout_height="wrap_content"
-		              android:layout_toLeftOf="@+id/btnDevice"
-		              android:layout_toRightOf="@+id/ivDevice"
+		              android:layout_toLeftOf="@+id/viewOperate"
+		              android:layout_toRightOf="@+id/ivIcon"
 		              android:orientation="vertical"
 		              android:layout_marginLeft="8dip"
 		              android:layout_marginRight="8dip"
@@ -25,7 +25,7 @@
 		               >
 
 					          <TextView
-					              android:id="@+id/tvDeviceTitle"
+					              android:id="@+id/tvTitle"
 					              android:layout_width="wrap_content"
 				              	  android:layout_height="fill_parent"
 				              	  android:layout_weight="1"
@@ -37,7 +37,7 @@
 					              />
 					          <TextView
 				              	  android:text="t"
-					              android:id="@+id/tvDeviceIp"
+					              android:id="@+id/tvDescribe"
 					              android:layout_width="wrap_content"
 					              android:layout_height="wrap_content"
 					              android:layout_weight="1"
@@ -45,7 +45,7 @@
 					               />
 		          </LinearLayout>
  					<ImageView
-			              android:id="@+id/ivDeviceNext"
+			              android:id="@+id/viewOperate"
 			              android:layout_width="wrap_content"
 			              android:layout_height="wrap_content"
 			              android:layout_alignParentRight="true"
@@ -55,21 +55,9 @@
 			              android:textColor="@color/white"
 			              android:text="定时"
 			              android:src="@drawable/nexticon" />
- 					<CheckBox
-			              android:id="@+id/cbnext"
-			              android:layout_width="wrap_content"
-			              android:layout_height="wrap_content"
-			              android:layout_alignParentRight="true"
-			               android:layout_centerVertical="true"
-			              android:focusable="false"
-			              android:layout_marginRight="15dp"
-			              android:visibility="gone"
-			              style="@style/checkboxtheme" />
-		          
-
 
 		          <ImageView
-		              android:id="@+id/ivDevice"
+		              android:id="@+id/ivIcon"
 		              android:layout_width="wrap_content"
 		              android:layout_height="wrap_content"
 		              android:layout_alignParentLeft="true"

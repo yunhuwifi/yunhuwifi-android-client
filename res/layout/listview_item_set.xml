@@ -14,7 +14,7 @@
           >
 
         <ImageView
-            android:id="@+id/ivset"
+            android:id="@+id/ivIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -24,18 +24,18 @@
             />
 
         <TextView
-            android:id="@+id/tvset"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/ivset"
-            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/ivIcon"
+            android:layout_marginLeft="20dp"
             android:text="t"
             android:textColor="@drawable/cancelfontcolor"
             android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/ivsetnext"
+            android:id="@+id/viewOperate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

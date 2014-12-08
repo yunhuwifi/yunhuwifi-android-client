@@ -17,7 +17,7 @@
 		              android:layout_width="match_parent"
 		              android:layout_height="wrap_content"
 		              android:layout_toLeftOf="@+id/layDowning"
-		              android:layout_toRightOf="@+id/ivDowning"
+		              android:layout_toRightOf="@+id/ivIcon"
 		              android:orientation="vertical"
 		              android:layout_marginLeft="8dip"
 		              android:layout_marginRight="8dip"
@@ -25,7 +25,7 @@
 		               >
 
 					          <TextView
-					              android:id="@+id/tvDowningTitle"
+					              android:id="@+id/tvTitle"
 					              android:layout_width="wrap_content"
 				              	  android:layout_height="fill_parent"
 				              	  android:layout_weight="1"
@@ -41,7 +41,7 @@
 						              android:orientation="horizontal"
 						              	  android:layout_weight="1">
 					          <TextView
-					              android:id="@+id/tvDowningSpeed"
+					              android:id="@+id/tvDescribe"
 					              android:layout_width="wrap_content"
 					              android:layout_height="wrap_content"
 					              android:layout_weight="1"
@@ -118,7 +118,7 @@
 			               android:layout_centerVertical="true"
 		              >
  					<Button
-			              android:id="@+id/btnDowning"
+			              android:id="@+id/viewOperate"
 			              android:layout_width="wrap_content"
 			              android:layout_height="wrap_content"
 			              android:focusable="false"
@@ -126,10 +126,9 @@
 			              android:background="@drawable/stopicon"
 			             />
  					<CheckBox
-			              android:id="@+id/cbdowning"
+			              android:id="@+id/cbitem"
 			              android:layout_width="wrap_content"
 			              android:layout_height="wrap_content"
-			   
 			              android:focusable="false"
 			              android:layout_marginRight="15dp"
 			              android:visibility="gone"
@@ -138,7 +137,7 @@
 				</LinearLayout>
 
 		          <ImageView
-		              android:id="@+id/ivDowning"
+		              android:id="@+id/ivIcon"
 		              android:layout_width="wrap_content"
 		              android:layout_height="wrap_content"
 		              android:layout_alignParentLeft="true"

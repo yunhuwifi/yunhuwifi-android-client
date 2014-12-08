@@ -14,7 +14,7 @@
           >
 
         <ImageView
-            android:id="@+id/ivwifi"
+            android:id="@+id/ivIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -24,11 +24,11 @@
             />
 
         <TextView
-            android:id="@+id/tvWifiName"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/ivwifi"
+            android:layout_toRightOf="@+id/ivIcon"
             android:layout_marginLeft="15dp"
             android:text="所连接的WiFi"
             android:focusable="false"
@@ -36,7 +36,7 @@
             android:textSize="16sp" />
 
         <ToggleButton
-            android:id="@+id/tgOpen"
+            android:id="@+id/viewOperate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
