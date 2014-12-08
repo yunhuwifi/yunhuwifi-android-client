@@ -10,12 +10,15 @@ import com.yunhuwifi.cloud.api.RouterService;
 import com.yunhuwifi.cloud.api.models.RouterModel;
 import com.yunhuwifi.cloud.api.models.RouterResult;
 import com.yunhuwifi.handlers.JsonCallBack;
+import com.yunhuwifi.models.RouterSet;
 import com.yunhuwifi.util.CustomDialog;
 import com.yunhuwifi.view.ListViewAdapter;
 import com.yunhuwifi.view.ListViewItem;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -70,8 +73,13 @@ public class RouterBindListActivity extends HeaderActivity {
 //				startActivityForResult(intent, REQUEST_CODE_BIND);
 			}
 		});
-
+		
 		this.lvBindRouter = (ListView) findViewById(R.id.lvBindRouter);
+		
+		RouterSet item0=new RouterSet();
+		item0.setMsg("公司的路由器");
+		item0.setIconRes(BitmapFactory.decodeResource(getResources(), R.drawable.abstracticon));
+		dataList.add(item0);
 		this.adapter = new ListViewAdapter(this.getApplicationContext(),
 				dataList,ROUTER,handler);
 
@@ -81,8 +89,9 @@ public class RouterBindListActivity extends HeaderActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-
-				RouterModel item = (RouterModel) dataList.get((int) id);
+				adapter.setSelectedPosition(position);
+				adapter.notifyDataSetInvalidated();
+			/*	RouterModel item = (RouterModel) dataList.get((int) id);
 
 				loading = CustomDialog.createLoadingDialog(
 						RouterBindListActivity.this, "");
@@ -106,7 +115,7 @@ public class RouterBindListActivity extends HeaderActivity {
 								showToast(strMsg + "(" + errorNo + ")",
 										Toast.LENGTH_SHORT);
 							}
-						});
+						});*/
 			}
 		});
 	}
