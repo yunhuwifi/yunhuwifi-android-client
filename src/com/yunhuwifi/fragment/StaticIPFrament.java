@@ -6,6 +6,7 @@ import com.foxrouter.api.model.RouterNetworkSettingStatic;
 import com.yunhuwifi.activity.R;
 import com.yunhuwifi.YunhuApplication;
 import com.yunhuwifi.handlers.JsonCallBack;
+import com.yunhuwifi.view.ClearEditText;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -16,12 +17,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class StaticIPFrament extends Fragment {
 		private Button btnstaticip,btnDNS;
-		private EditText netmask, ipaddr,gwaddr; 
+		private ClearEditText netmask, ipaddr,gwaddr; 
 		private String[] dns=null;
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
@@ -29,9 +29,9 @@ public class StaticIPFrament extends Fragment {
 					false);
 			btnstaticip = (Button) v.findViewById(R.id.btnstaticip);
 			btnDNS = (Button) v.findViewById(R.id.btnDNS);
-			netmask = (EditText) v.findViewById(R.id.netmask);
-			ipaddr = (EditText) v.findViewById(R.id.ipaddr);
-			gwaddr = (EditText) v.findViewById(R.id.gwaddr);
+			netmask = (ClearEditText) v.findViewById(R.id.netmask);
+			ipaddr = (ClearEditText) v.findViewById(R.id.ipaddr);
+			gwaddr = (ClearEditText) v.findViewById(R.id.gwaddr);
 			btnDNS.setOnClickListener(listener);
 			btnstaticip.setOnClickListener(listener);
 			return v;
@@ -55,8 +55,8 @@ public class StaticIPFrament extends Fragment {
 			View dlgView = View.inflate(getActivity(),  R.layout.dns_box,null);
 			View ok = dlgView.findViewById(R.id.ok); 
 			ok.setTag(dlg); 
-			final EditText first=(EditText)dlgView.findViewById(R.id.first);  
-			final EditText backup = (EditText)dlgView.findViewById(R.id.backup); 
+			final ClearEditText first=(ClearEditText)dlgView.findViewById(R.id.first);  
+			final ClearEditText backup = (ClearEditText)dlgView.findViewById(R.id.backup); 
 			ok.setOnClickListener(new OnClickListener() {
 				
 				@Override

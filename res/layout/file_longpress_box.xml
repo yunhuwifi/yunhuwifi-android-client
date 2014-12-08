@@ -13,13 +13,14 @@
 
 
         <RelativeLayout
-            android:id="@+id/laycopy"
+            android:id="@+id/layitem0"
             android:layout_width="fill_parent"
             android:layout_height="50dp" 
             android:background="@drawable/longitembg"
             android:padding="10dp">
 
             <TextView
+                android:id="@+id/tv0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -31,20 +32,16 @@
         </RelativeLayout>
 
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="@drawable/line"
-           />
 
             <RelativeLayout
-                 android:id="@+id/laycut"
+                 android:id="@+id/layitem1"
             android:layout_width="fill_parent"
             android:layout_height="50dp" 
              android:background="@drawable/longitembg"
              android:padding="10dp">
 
             <TextView
+                android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -54,20 +51,17 @@
                 android:textColor="@color/black" />
             
         </RelativeLayout>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="@drawable/line"
-           />
 
             <RelativeLayout
-                 android:id="@+id/laydel"
+                 android:id="@+id/layitem2"
             android:layout_width="fill_parent"
             android:layout_height="50dp" 
              android:background="@drawable/longitembg"
+             android:visibility="gone"
              android:padding="10dp">
 
             <TextView
+                android:id="@+id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -77,43 +71,19 @@
                 android:textColor="@color/black" />
             
         </RelativeLayout>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="@drawable/line"
-           />
 
-            <RelativeLayout
-                 android:id="@+id/laymove"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp" 
-             android:background="@drawable/longitembg"
-             android:padding="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:text="移动"
-                  android:textSize="18sp"
-                android:textColor="@color/black" />
             
-        </RelativeLayout>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="@drawable/line"
-           />
 
             <RelativeLayout
-                 android:id="@+id/layrename"
+                 android:id="@+id/layitem3"
             android:layout_width="fill_parent"
             android:layout_height="50dp" 
              android:background="@drawable/longitembg"
+              android:visibility="gone"
              android:padding="10dp">
 
             <TextView
+                android:id="@+id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -123,20 +93,17 @@
                 android:textColor="@color/black" />
             
         </RelativeLayout>
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="@drawable/line"
-           />
 
             <RelativeLayout
-                 android:id="@+id/laydetail"
+                 android:id="@+id/layitem4"
             android:layout_width="fill_parent"
             android:layout_height="50dp" 
              android:background="@drawable/longitembg"
+              android:visibility="gone"
              android:padding="10dp">
 
             <TextView
+                android:id="@+id/tv4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -146,7 +113,25 @@
                 android:textColor="@color/black" />
             
         </RelativeLayout>
+		<RelativeLayout
+                 android:id="@+id/layitem5"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" 
+             android:background="@drawable/longitembg"
+                   android:visibility="gone"
+             android:padding="10dp">
 
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="移动"
+                  android:textSize="18sp"
+                android:textColor="@color/black" />
+            
+        </RelativeLayout>
         
 </LinearLayout>
 </RelativeLayout>

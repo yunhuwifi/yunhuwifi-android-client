@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="5dip"
         android:scaleType="fitXY"
-        android:src="@drawable/relativerouter" />
+        android:src="@drawable/abstracticon" />
 
     <ImageView
         android:id="@+id/ivChecked"

@@ -1,25 +1,27 @@
 package com.yunhuwifi.activity;
 
+import com.yunhuwifi.view.ClearEditText;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class FeedBackActivity extends HeaderActivity implements OnClickListener{
 
 	private Button btnfeedback;
-	private EditText etContent,etContact;
+	private ClearEditText etContent,etContact;
 	
 	protected void onCreate(Bundle savedInstanceState){
 		
 		super.onCreate(savedInstanceState);
 		setContentLayout(R.layout.activity_feedback);
 		
-		etContent=(EditText) findViewById(R.id.etContact);
-		etContact=(EditText) findViewById(R.id.etContext);
+		etContent=(ClearEditText) findViewById(R.id.etContact);
+		etContact=(ClearEditText) findViewById(R.id.etContext);
 		btnfeedback=(Button) findViewById(R.id.btnfeedback);
 		btnfeedback.setOnClickListener(this);
+		this.setHeaderText("用户反馈");
 		this.setLeftImageVisible(true);
 		this.setRightImageVisible(false);
 		this.ivLeft.setOnClickListener(new OnClickListener() {

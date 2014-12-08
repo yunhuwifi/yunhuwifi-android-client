@@ -19,6 +19,7 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
@@ -48,8 +49,10 @@ public class DownloadedFragment extends Fragment {
 	private void init(){
 		listData=new ArrayList<ListViewItem>();
 		RouterState item1=new RouterState();
+		item1.setTime("186MB");
 		item1.setMsg("匹诺曹" );
 		RouterState item2=new RouterState();
+		item2.setTime("165");
 		item2.setMsg("飞虎2" );
 		listData.add(item2);
 		listData.add(item1);
@@ -75,9 +78,13 @@ public class DownloadedFragment extends Fragment {
 	
 	private void puplongbox(){
 		final Dialog dlg = new Dialog(getActivity());
-		View dlgView = View.inflate(getActivity(),  R.layout.downloads_longpress_box,null);
-		View layrename = dlgView.findViewById(R.id.layopen); 
-		layrename.setTag(dlg); 
+		View dlgView = View.inflate(getActivity(),  R.layout.file_longpress_box,null);
+		View layrename = dlgView.findViewById(R.id.layitem0); 
+		layrename.setTag(dlg);  
+		TextView tvopen = (TextView)dlgView.findViewById(R.id.tv0); 
+		tvopen.setText("打开"); 
+		TextView tvdel = (TextView)dlgView.findViewById(R.id.tv1); 
+		tvdel.setText("删除");
 		layrename.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -85,7 +92,7 @@ public class DownloadedFragment extends Fragment {
 				dlg.dismiss(); 
 			} 
 		});
-		View laydisconnect = dlgView.findViewById(R.id.laydel);
+		View laydisconnect = dlgView.findViewById(R.id.layitem1);
 		laydisconnect.setTag(dlg);
 		laydisconnect.setOnClickListener(new OnClickListener() {
 			

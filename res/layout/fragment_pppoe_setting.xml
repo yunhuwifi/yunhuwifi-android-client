@@ -5,7 +5,6 @@
     android:orientation="vertical" 
      android:background="@color/white"
     >
-<!-- 	android:background="@drawable/shape_bg"  -->
 <LinearLayout 
 	android:orientation="vertical" 
 	android:layout_width="fill_parent"
@@ -21,13 +20,8 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <!-- <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-              android:gravity="center"
-            android:text="账号" /> -->
 
-        <EditText
+        <com.yunhuwifi.view.ClearEditText
             android:id="@+id/wanUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,17 +31,11 @@
             android:ems="10"
             android:hint="上网账号"
             android:textColor="#ff333333"
-            android:textSize="18.0sp" >
+            android:textSize="18.0sp" />
 
-        </EditText>
         
     </LinearLayout>
     
-  <!--   <View 
-    android:background="@drawable/shape_line" 
-    android:layout_width="fill_parent" 
-    android:layout_height="1.0px" />
-     -->
     <LinearLayout
         android:id="@+id/mail"
         android:layout_width="fill_parent"
@@ -55,15 +43,8 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-     <!--    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-              android:gravity="center"
-            android:text="密码" /> -->
         
-        <EditText
+        <com.yunhuwifi.view.ClearEditText
             android:id="@+id/wanPwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

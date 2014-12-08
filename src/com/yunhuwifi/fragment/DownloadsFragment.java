@@ -114,14 +114,14 @@ public class DownloadsFragment extends Fragment {
 	
 	private void puplongbox(){
 		final Dialog dlg = new Dialog(getActivity());
-		View dlgView = View.inflate(getActivity(),  R.layout.device_longpress_box,null);
-		View layrename = dlgView.findViewById(R.id.laychangeremark); 
+		View dlgView = View.inflate(getActivity(),  R.layout.file_longpress_box,null);
+		View layrename = dlgView.findViewById(R.id.layitem0); 
 		layrename.setTag(dlg); 
-		TextView tvcontinue = (TextView)dlgView.findViewById(R.id.tvrevise); 
+		TextView tvcontinue = (TextView)dlgView.findViewById(R.id.tv0); 
 		tvcontinue.setText("继续"); 
-		TextView tvstop = (TextView)dlgView.findViewById(R.id.tvbreak); 
+		TextView tvstop = (TextView)dlgView.findViewById(R.id.tv1); 
 		tvstop.setText("暂停");
-		TextView tvdel = (TextView)dlgView.findViewById(R.id.tvoperate); 
+		TextView tvdel = (TextView)dlgView.findViewById(R.id.tv2); 
 		tvdel.setText("删除");
 		layrename.setOnClickListener(new OnClickListener() {
 			
@@ -130,7 +130,7 @@ public class DownloadsFragment extends Fragment {
 				dlg.dismiss(); 
 			} 
 		});
-		View laydisconnect = dlgView.findViewById(R.id.laydisconnect);
+		View laydisconnect = dlgView.findViewById(R.id.layitem1);
 		laydisconnect.setTag(dlg);
 		laydisconnect.setOnClickListener(new OnClickListener() {
 			
@@ -139,7 +139,7 @@ public class DownloadsFragment extends Fragment {
 				dlg.dismiss();
 			}
 		});
-		View layaddblack = dlgView.findViewById(R.id.layaddblack); 
+		View layaddblack = dlgView.findViewById(R.id.layitem2); 
 		layaddblack.setTag(dlg);
 		layaddblack.setOnClickListener(new OnClickListener() {
 			

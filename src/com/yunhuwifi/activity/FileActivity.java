@@ -40,7 +40,7 @@ public class FileActivity extends HeaderActivity {
 		
 		super.onCreate(savedInstanceState);
 		setContentLayout(R.layout.activity_file);
-		
+		lvfile=(ListView) findViewById(R.id.lvfile);
 		this.setHeaderText("存储管理");
 		this.setLeftImageVisible(true);
 		this.setRightImageVisible(true);
@@ -60,12 +60,12 @@ public class FileActivity extends HeaderActivity {
 			}
 		});
 		showFileDir(ROOT_PATH);
-		
 	}
 
-	public void OnCreateOptionsMenu(Menu menu){
-		getMenuInflater().inflate(R.menu.menu,menu);
+	public boolean OnCreateOptionsMenu(Menu menu){
 		super.onCreateOptionsMenu(menu);
+		getMenuInflater().inflate(R.menu.menu,menu);
+		return true;
 		
 	}
 	

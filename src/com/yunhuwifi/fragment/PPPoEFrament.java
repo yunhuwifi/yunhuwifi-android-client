@@ -6,6 +6,7 @@ import com.foxrouter.api.model.RouterNetworkSettingPPPoE;
 import com.yunhuwifi.activity.R;
 import com.yunhuwifi.YunhuApplication;
 import com.yunhuwifi.handlers.JsonCallBack;
+import com.yunhuwifi.view.ClearEditText;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,21 +15,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class PPPoEFrament extends Fragment {
 
 	private Button btnpppoe;
-	private EditText wanUser, wanPwd;
+	private ClearEditText wanUser, wanPwd;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_pppoe_setting, container,
 				false);
 		btnpppoe = (Button) v.findViewById(R.id.btnpppoe);
-		wanUser = (EditText) v.findViewById(R.id.wanUser);
-		wanPwd = (EditText) v.findViewById(R.id.wanPwd);
+		wanUser = (ClearEditText) v.findViewById(R.id.wanUser);
+		wanPwd = (ClearEditText) v.findViewById(R.id.wanPwd);
 		btnpppoe.setOnClickListener(listener);
 		return v;
 	}

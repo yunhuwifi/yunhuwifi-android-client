@@ -49,7 +49,7 @@
                         android:layout_width="fill_parent"
                          android:layout_height="wrap_content"
                         >
-                        <EditText
+                        <com.yunhuwifi.view.ClearEditText
                             android:id="@+id/ipaddr"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -58,8 +58,7 @@
                             android:gravity="center_vertical"
                             android:hint="ip地址"
                             android:layout_margin="10dp"
-                            android:padding="5dp" >
-                        </EditText>
+                            android:padding="5dp" />
                     </TableRow>
 
                     <View 
@@ -73,7 +72,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content" >
 
-						<EditText
+						<com.yunhuwifi.view.ClearEditText
 						    android:id="@+id/netmask"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -82,8 +81,7 @@
                             android:gravity="center_vertical"
                             android:hint="子网掩码"
                             android:layout_margin="10dp"
-                            android:padding="5dp" >
-                        </EditText>
+                            android:padding="5dp" />
                     </TableRow>
 
                     <View 
@@ -97,7 +95,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content" >
 
-						<EditText
+						<com.yunhuwifi.view.ClearEditText
 						    android:id="@+id/gwaddr"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -106,8 +104,7 @@
                             android:gravity="center_vertical"
                             android:hint="默认网关"
                             android:layout_margin="10dp"
-                            android:padding="5dp" >
-                        </EditText>
+                            android:padding="5dp" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>

@@ -14,7 +14,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
-		TextView headerText = (TextView) findViewById(R.id.tvHeaderText);
+		TextView headerText = (TextView) findViewById(R.id.header_txtView);
 		headerText.setText("注册");
 		findViewById(R.id.regcode);
 		findViewById(R.id.register).setOnClickListener(this);
