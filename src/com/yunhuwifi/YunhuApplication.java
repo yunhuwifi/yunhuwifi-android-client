@@ -21,6 +21,7 @@ public class YunhuApplication extends Application {
 		UmengUpdateAgent.setChannel(null);
 		UmengUpdateAgent.setDefault();
 		UmengUpdateAgent.update(this, AppKey.umengAPPKEY, "");
+		UmengUpdateAgent.setDeltaUpdate(false);
 		// 初始化短信服务
 		SMSSDK.initSDK(this, AppKey.captchaAPPKEY, AppKey.captchaAPPSECRET);
 		
