@@ -3,9 +3,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#99232323"
+    android:padding="10dp"
      >
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/umeng_update_dialog_bg"
@@ -33,6 +34,7 @@
 				android:layout_centerVertical="true"
 				android:layout_marginRight="10dp"
 				android:focusable="true"
+				android:visibility="gone"
 				android:background="@drawable/umeng_update_button_close_bg_selector"/>
             
         </RelativeLayout>

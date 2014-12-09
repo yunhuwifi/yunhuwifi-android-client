@@ -23,12 +23,12 @@
             android:drawableTop="@drawable/operatenewfilebg"
             android:text="新建文件夹" />
         <Button
-            android:id="@+id/btnedit"
+            android:id="@+id/btnupload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/bottomoperate"
             android:drawableTop="@drawable/operateeditbg"
-            android:text="编辑" />
+            android:text="上传" />
         
     </LinearLayout>
 </LinearLayout>
