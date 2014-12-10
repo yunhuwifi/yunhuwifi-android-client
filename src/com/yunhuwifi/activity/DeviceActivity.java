@@ -36,7 +36,6 @@ public class DeviceActivity extends HeaderActivity implements OnClickListener, O
 	private ListViewAdapter adapter;
 	static final private int REQUESTONE = 0;
 	static final private int REQUESTTOW = 1;
-	private final int DEVICE=1;
 	Handler handler = new Handler() ;
 	public void handleMessage(android.os.Message msg) {
 		if (msg.what == 1) {
@@ -91,7 +90,7 @@ public class DeviceActivity extends HeaderActivity implements OnClickListener, O
 
 		});
 
-		adapter = new ListViewAdapter(DeviceActivity.this, list,DEVICE,handler);
+		adapter = new ListViewAdapter(DeviceActivity.this, list,R.layout.listview_item_device,handler);
 		lvdevice.setAdapter(adapter);
 		lvdevice.setOnItemClickListener(new OnItemClickListener() {
 
@@ -154,7 +153,7 @@ public class DeviceActivity extends HeaderActivity implements OnClickListener, O
 				finish();
 				System.exit(0);
 			}
-			return true;
+			return false;
 		}
 		return super.onKeyDown(keyCode, event);
 	}

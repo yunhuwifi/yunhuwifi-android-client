@@ -18,7 +18,6 @@ import android.view.View.OnClickListener;
 import android.widget.ListView;
 
 public class BlackListActivity extends HeaderActivity implements  OnRefreshListioner {
-	private final int BLACKLIST=5;
 	private PullDownListView pullList;
 	private ListView lvBlackList;
 	private ListViewAdapter adapter;
@@ -53,7 +52,7 @@ public class BlackListActivity extends HeaderActivity implements  OnRefreshListi
 		RouterBlacklist item=new RouterBlacklist();
 		item.setMsg("127.23.3.1");
 		listData.add(item);
-		adapter=new ListViewAdapter(BlackListActivity.this, listData,BLACKLIST,handler);
+		adapter=new ListViewAdapter(BlackListActivity.this, listData,R.layout.listview_item_blacklist,handler);
 		adapter.notifyDataSetChanged();
 		this.lvBlackList.setAdapter(adapter);
 	}

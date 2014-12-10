@@ -28,7 +28,6 @@ import android.graphics.BitmapFactory;
 
 public class SettingActivity extends HeaderActivity implements OnClickListener {
 //	FeedbackAgent agent;
-	private final int SET=3;
 	private ListView lvSet;
 	private List<ListViewItem> data = new ArrayList<ListViewItem>();;
 	private ListViewAdapter adapter;
@@ -128,7 +127,7 @@ public class SettingActivity extends HeaderActivity implements OnClickListener {
 		data.add(item4);
 		data.add(item5);
 		
-		adapter = new ListViewAdapter(getApplicationContext(), data,SET,handler);
+		adapter = new ListViewAdapter(getApplicationContext(), data,R.layout.listview_item_set,handler);
 		lvSet.setAdapter(adapter);
 		lvSet.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -195,7 +194,7 @@ public class SettingActivity extends HeaderActivity implements OnClickListener {
 				finish();
 				System.exit(0);
 			}
-			return true;
+			return false;
 		}
 		return super.onKeyDown(keyCode, event);
 	}

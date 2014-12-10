@@ -20,7 +20,6 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class RouterSetActivity extends HeaderActivity {
-	private final int SET=3;
 	private ListView lvRouterSet;
 	private List<ListViewItem> data=new ArrayList<ListViewItem>();
 	private ListViewAdapter adapter;
@@ -83,7 +82,7 @@ public class RouterSetActivity extends HeaderActivity {
 		data.add(item6);
 		
 		
-		 adapter=new ListViewAdapter(getApplicationContext(), data,SET,handler);
+		 adapter=new ListViewAdapter(getApplicationContext(), data,R.layout.listview_item_set,handler);
 			lvRouterSet.setAdapter(adapter);
 			lvRouterSet.setOnItemClickListener(new OnItemClickListener() {
 				@Override

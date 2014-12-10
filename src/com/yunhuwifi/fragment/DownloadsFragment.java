@@ -30,7 +30,6 @@ public class DownloadsFragment extends Fragment {
 	private ListView lvnotdownload;
 	private List<ListViewItem> listData;
 	private ListViewAdapter adapter;
-	private final int DOWNLOAD=8;
 	public Handler handler=new Handler();
 	public void handleMessage(android.os.Message msg){
 		if(msg.what==1){
@@ -91,7 +90,7 @@ public class DownloadsFragment extends Fragment {
 		listData.add(download4);
 		
 		
-		adapter=new ListViewAdapter(getActivity(), listData,DOWNLOAD, handler);
+		adapter=new ListViewAdapter(getActivity(), listData,R.layout.listview_item_download, handler);
 		lvnotdownload.setAdapter(adapter);
 		lvnotdownload.setOnItemClickListener(new OnItemClickListener() {
 
@@ -115,33 +114,34 @@ public class DownloadsFragment extends Fragment {
 	private void puplongbox(){
 		final Dialog dlg = new Dialog(getActivity());
 		View dlgView = View.inflate(getActivity(),  R.layout.file_longpress_box,null);
-		View layrename = dlgView.findViewById(R.id.layitem0); 
-		layrename.setTag(dlg); 
+		View layrecontinue = dlgView.findViewById(R.id.layitem0); 
+		layrecontinue.setTag(dlg); 
 		TextView tvcontinue = (TextView)dlgView.findViewById(R.id.tv0); 
 		tvcontinue.setText("继续"); 
 		TextView tvstop = (TextView)dlgView.findViewById(R.id.tv1); 
 		tvstop.setText("暂停");
 		TextView tvdel = (TextView)dlgView.findViewById(R.id.tv2); 
 		tvdel.setText("删除");
-		layrename.setOnClickListener(new OnClickListener() {
+		layrecontinue.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				dlg.dismiss(); 
 			} 
 		});
-		View laydisconnect = dlgView.findViewById(R.id.layitem1);
-		laydisconnect.setTag(dlg);
-		laydisconnect.setOnClickListener(new OnClickListener() {
+		View laystop = dlgView.findViewById(R.id.layitem1);
+		laystop.setTag(dlg);
+		laystop.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				dlg.dismiss();
 			}
 		});
-		View layaddblack = dlgView.findViewById(R.id.layitem2); 
-		layaddblack.setTag(dlg);
-		layaddblack.setOnClickListener(new OnClickListener() {
+		View laydel = dlgView.findViewById(R.id.layitem2); 
+		laydel.setVisibility(View.VISIBLE);
+		laydel.setTag(dlg);
+		laydel.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {

@@ -3,6 +3,7 @@ package com.yunhuwifi.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -23,7 +24,6 @@ import com.yunhuwifi.view.PullDownListView;
 import com.yunhuwifi.view.PullDownListView.OnRefreshListioner;
 
 public class NotinstallFragment extends Fragment implements OnRefreshListioner{
-	private final int APP=2;
 	private ListView lvapps; 
 	private List<ListViewItem> listNotinstall;
 	private PullDownListView pullnotinstall;
@@ -48,14 +48,16 @@ public class NotinstallFragment extends Fragment implements OnRefreshListioner{
 		 listNotinstall = new ArrayList<ListViewItem>();
 		 NotinstallItem item1=new NotinstallItem();
 		 NotinstallItem item2=new NotinstallItem();
+		 item1.setIconRes(BitmapFactory.decodeResource(getResources(), R.drawable.launcher));
 		 item1.setMsg("观看最新剧集");
 		 item1.setName("优酷追剧");
 		 item2.setMsg("baidu.apk");
 		 item2.setName("修改时间:2014-11-21");
+		 item2.setIconRes(BitmapFactory.decodeResource(getResources(), R.drawable.launcher));
 		 listNotinstall.add(item2);
 		 listNotinstall.add(item1);
 
-		 adapter = new ListViewAdapter(getActivity(), listNotinstall,APP,handler);
+		 adapter = new ListViewAdapter(getActivity(), listNotinstall,R.layout.listview_item_notinstallapp,handler);
 		lvapps.setAdapter(adapter);
 		lvapps.setOnItemClickListener(new OnItemClickListener() {
 

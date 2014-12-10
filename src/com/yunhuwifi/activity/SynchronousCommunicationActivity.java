@@ -48,7 +48,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class SynchronousCommunicationActivity extends HeaderActivity  {
-	private final int SET=3;
 	private static final int SCALE = 5;// 照片缩小比例
 	private ListView lvCommunications;
 	private List<ListViewItem> data = new ArrayList<ListViewItem>();
@@ -102,7 +101,7 @@ public class SynchronousCommunicationActivity extends HeaderActivity  {
 		data.add(item3);
 		data.add(item4);
 		
-		adapter = new ListViewAdapter(SynchronousCommunicationActivity.this,data,SET,hand);
+		adapter = new ListViewAdapter(SynchronousCommunicationActivity.this,data,R.layout.listview_item_set,hand);
 		lvCommunications.setAdapter(adapter);
 		lvCommunications.setOnItemClickListener(new OnItemClickListener() {
 			@Override

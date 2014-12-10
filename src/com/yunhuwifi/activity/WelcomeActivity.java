@@ -89,13 +89,13 @@ public class WelcomeActivity extends BaseActivity implements AnimationListener {
 						@Override
 						public void onFailure(Throwable t, int errorNo,
 								String strMsg) {
-							startActivity(new Intent(WelcomeActivity.this,NotConnectActivity.class));
+							startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
 							finish();
 						}
 
 					});
 		} catch (NetworkErrorException e) {
-			startActivity(new Intent(WelcomeActivity.this,NotConnectActivity.class));
+			startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
 			finish();
 		}
 	}

@@ -10,6 +10,7 @@ import com.yunhuwifi.view.ListViewItem;
 import com.yunhuwifi.view.ListViewAdapter;
  
 import android.app.Dialog;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -25,7 +26,6 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
 public class DownloadedFragment extends Fragment {
-	private final int FILE=4;
 	private ListView lvdownloaded;
 	private List<ListViewItem> listData;
 	private ListViewAdapter adapter;
@@ -49,14 +49,16 @@ public class DownloadedFragment extends Fragment {
 	private void init(){
 		listData=new ArrayList<ListViewItem>();
 		RouterState item1=new RouterState();
+		item1.setImg(BitmapFactory.decodeResource(getResources(), R.drawable.launcher));
 		item1.setTime("186MB");
 		item1.setMsg("匹诺曹" );
 		RouterState item2=new RouterState();
+		item2.setImg(BitmapFactory.decodeResource(getResources(), R.drawable.launcher));
 		item2.setTime("165");
 		item2.setMsg("飞虎2" );
 		listData.add(item2);
 		listData.add(item1);
-		adapter=new ListViewAdapter(getActivity(), listData,FILE,handler);
+		adapter=new ListViewAdapter(getActivity(), listData,R.layout.listview_item_file,handler);
 		lvdownloaded.setAdapter(adapter);
 		lvdownloaded.setOnItemClickListener(new OnItemClickListener() {
 
@@ -79,22 +81,22 @@ public class DownloadedFragment extends Fragment {
 	private void puplongbox(){
 		final Dialog dlg = new Dialog(getActivity());
 		View dlgView = View.inflate(getActivity(),  R.layout.file_longpress_box,null);
-		View layrename = dlgView.findViewById(R.id.layitem0); 
-		layrename.setTag(dlg);  
+		View layreopen = dlgView.findViewById(R.id.layitem0); 
+		layreopen.setTag(dlg);  
 		TextView tvopen = (TextView)dlgView.findViewById(R.id.tv0); 
 		tvopen.setText("打开"); 
 		TextView tvdel = (TextView)dlgView.findViewById(R.id.tv1); 
 		tvdel.setText("删除");
-		layrename.setOnClickListener(new OnClickListener() {
+		layreopen.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				dlg.dismiss(); 
 			} 
 		});
-		View laydisconnect = dlgView.findViewById(R.id.layitem1);
-		laydisconnect.setTag(dlg);
-		laydisconnect.setOnClickListener(new OnClickListener() {
+		View laydel = dlgView.findViewById(R.id.layitem1);
+		laydel.setTag(dlg);
+		laydel.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {

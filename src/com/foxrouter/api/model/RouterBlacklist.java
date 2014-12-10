@@ -7,7 +7,6 @@ import com.yunhuwifi.view.ListViewItem;
 public class RouterBlacklist implements ListViewItem{
 	private String msg;
 	private int viewoperate;
-	private Bitmap imgIcon;
 	public int getViewoperate() {
 		return viewoperate;
 	}
@@ -16,13 +15,6 @@ public class RouterBlacklist implements ListViewItem{
 		this.viewoperate = viewoperate;
 	}
 
-	public Bitmap getImgIcon() {
-		return imgIcon;
-	}
-
-	public void setImgIcon(Bitmap imgIcon) {
-		this.imgIcon = imgIcon;
-	}
 
 	public String getMsg() {
 		return msg;
@@ -39,7 +31,7 @@ public class RouterBlacklist implements ListViewItem{
 
 	@Override
 	public Bitmap getBitmap() {
-		return getImgIcon();
+		return null;
 	}
 
 

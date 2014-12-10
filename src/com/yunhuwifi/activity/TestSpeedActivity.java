@@ -66,10 +66,10 @@ public class TestSpeedActivity extends BaseActivity {
 				falg = 0;
 				numberTotal = 0;
 				tvmaxtxt.setVisibility(View.GONE);
-				tvpbtxt.setVisibility(View.GONE);
 				tvunit.setVisibility(View.GONE);
 				tvspeed.setVisibility(View.GONE);
-				horizontalPB.setVisibility(View.GONE);
+//				tvpbtxt.setVisibility(View.GONE);
+//				horizontalPB.setVisibility(View.GONE);
 				circlePb.setProgressNotInUiThread(0,"");
 				new Thread() {
 					@Override
@@ -211,20 +211,26 @@ public class TestSpeedActivity extends BaseActivity {
 				circlePb.setProgressNotInUiThread(100,"");
 				
 				int pg=broadband(speedMax/1024);
-				int x=pg+20;
 				horizontalPB.setProgress(pg);
-				TranslateAnimation animation=new TranslateAnimation(0, x, 0, 0);
-				tvpbtxt.setAnimation(animation);
+				int x=horizontalPB.getLeft();
+			/*	int y=horizontalPB.getRight();
+				int t=horizontalPB.getTop();
+				int b=horizontalPB.getBottom();
+				int sx=horizontalPB.getScrollX();
+				int sy=horizontalPB.getScrollY();*/
+//				TranslateAnimation animation=new TranslateAnimation(x, x+pg, 0, 0);
+//				tvpbtxt.setAnimation(animation);
 				
-				/*RelativeLayout.LayoutParams pa=(RelativeLayout.LayoutParams) tvpbtxt.getLayoutParams();
-				pa.setMargins(x,0,0,0);
-				tvpbtxt.setLayoutParams(pa);*/
+				LinearLayout.LayoutParams pa=(LinearLayout.LayoutParams) tvpbtxt.getLayoutParams();
+				pa.setMargins(x+pg,0,0,0);
+				tvpbtxt.setLayoutParams(pa);
 				tvpbtxt.setVisibility(View.VISIBLE);
 				horizontalPB.setVisibility(View.VISIBLE);
 				tvmaxtxt.setVisibility(View.VISIBLE);
 				startButton.setText("重新检测");
 				showToast("检测完成", Toast.LENGTH_SHORT);
-				tvpbtxt.setText(df.format(speedMax/1024/128)+"\n"+"Mb/s");
+//				tvpbtxt.setText(df.format(speedMax/1024/128)+"\n"+"Mb/s"+"\n"+x+"\n"+y+"\n"+t+"\n"+b+"\n"+sx+"\n"+sy);
+				tvpbtxt.setText(df.format(speedMax/1024/128)+"Mb/s");
 				break;
 			default:
 				break;

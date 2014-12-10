@@ -37,7 +37,7 @@ public class RouterSet implements ListViewItem{
 	}
 	@Override
 	public int getOperationView() {
-		return getViewOpreate();
+		return 0;
 	}
 	@Override
 	public String getPrecent() {

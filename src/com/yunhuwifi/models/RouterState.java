@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 
 
 public class RouterState implements ListViewItem{
-
+	private Bitmap img;
 	private String msg;
 	private String time;
 	private int viewoperate;
@@ -17,7 +17,7 @@ public class RouterState implements ListViewItem{
 
 	@Override
 	public Bitmap getBitmap() {
-		return null;
+		return getImg();
 	}
 
 
@@ -32,13 +32,12 @@ public class RouterState implements ListViewItem{
 	@Override
 	public String getSpeed() {
 		// TODO Auto-generated method stub
-		return null;
+		return getTime();
 	}
 
 	@Override
 	public String getDate() {
-		// TODO Auto-generated method stub
-		return getTime();
+		return null;
 	}
 
 	@Override
@@ -84,6 +83,14 @@ public class RouterState implements ListViewItem{
 
 	public void setTime(String time) {
 		this.time = time;
+	}
+
+	public Bitmap getImg() {
+		return img;
+	}
+
+	public void setImg(Bitmap img) {
+		this.img = img;
 	}
 
 	

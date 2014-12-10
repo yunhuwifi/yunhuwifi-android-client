@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.yunhuwifi.activity.R;
-import com.yunhuwifi.RouterContext;
 import com.yunhuwifi.UserContext;
 import com.yunhuwifi.cloud.api.RouterService;
 import com.yunhuwifi.cloud.api.models.RouterModel;
@@ -17,7 +16,6 @@ import com.yunhuwifi.view.ListViewItem;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,7 +33,6 @@ public class RouterBindListActivity extends HeaderActivity {
 	private ListViewAdapter adapter;
 	private List<ListViewItem> dataList = new ArrayList<ListViewItem>();
 	private UserContext userContext;
-	private final int ROUTER=6;
 	private final static int REQUEST_CODE_LOGIN = 0;
 	private final static int REQUEST_CODE_BIND = 1;
 	private Dialog loading;
@@ -70,7 +67,7 @@ public class RouterBindListActivity extends HeaderActivity {
 				Intent intent = new Intent(RouterBindListActivity.this,
 						RouterBindActivity.class);
 				startActivity(intent);
-//				startActivityForResult(intent, REQUEST_CODE_BIND);
+				startActivityForResult(intent, REQUEST_CODE_BIND);
 			}
 		});
 		
@@ -79,9 +76,13 @@ public class RouterBindListActivity extends HeaderActivity {
 		RouterSet item0=new RouterSet();
 		item0.setMsg("公司的路由器");
 		item0.setIconRes(BitmapFactory.decodeResource(getResources(), R.drawable.abstracticon));
+		RouterSet item1=new RouterSet();
+		item1.setMsg("家里的路由器");
+		item1.setIconRes(BitmapFactory.decodeResource(getResources(),R.drawable.abstracticon));
 		dataList.add(item0);
+		dataList.add(item1);
 		this.adapter = new ListViewAdapter(this.getApplicationContext(),
-				dataList,ROUTER,handler);
+				dataList,R.layout.listview_item_router,handler);
 
 		this.lvBindRouter.setAdapter(this.adapter);
 
@@ -126,7 +127,7 @@ public class RouterBindListActivity extends HeaderActivity {
 
 		if (getApplicationContext().getUserContext() == null) {
 			Intent intent = new Intent(this, LoginActivity.class);
-//			startActivityForResult(intent, REQUEST_CODE_LOGIN);
+			startActivityForResult(intent, REQUEST_CODE_LOGIN);
 		} else {
 			this.userContext = getApplicationContext().getUserContext();
 			loadRouter();
@@ -168,8 +169,8 @@ public class RouterBindListActivity extends HeaderActivity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		/*if (requestCode == REQUEST_CODE_LOGIN && resultCode == RESULT_OK) {
+		if (requestCode == REQUEST_CODE_LOGIN && resultCode == RESULT_OK) {
 			this.loadRouter();
-		}*/
+		}
 	}
 }

@@ -120,7 +120,7 @@ public class ExpandappActivity extends HeaderFragmentActivity {
 				finish();
 				System.exit(0);
 			}
-			return true;
+			return false;
 		}
 		return super.onKeyDown(keyCode, event);
 	}

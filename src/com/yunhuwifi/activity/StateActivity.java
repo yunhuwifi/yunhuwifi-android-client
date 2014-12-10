@@ -47,7 +47,6 @@ public class StateActivity extends BaseFragmentActivity implements OnClickListen
 	private  Button btndeleted,btncancel,btnclear;
 	private RadioButton  radiobtnall; 
 	private TextView tvheaderstate;
-	private final int STATE=0;
 	Handler handler = new Handler() ;
 		public void handleMessage(android.os.Message msg) {
 			if (msg.what == 1) {
@@ -107,7 +106,7 @@ public class StateActivity extends BaseFragmentActivity implements OnClickListen
 	}
 	private void  judge(){
 	
-			adapter = new ListViewAdapter(getApplicationContext(),listState,STATE,handler);
+			adapter = new ListViewAdapter(getApplicationContext(),listState,R.layout.listview_item_state,handler);
 			adapter.notifyDataSetChanged();
 			lvState.setAdapter(adapter);
 			lvState.setOnItemClickListener(new OnItemClickListener() {
@@ -269,7 +268,7 @@ public class StateActivity extends BaseFragmentActivity implements OnClickListen
 					finish();
 					System.exit(0);
 				}
-				return true;
+				return false;
 			}
 			return super.onKeyDown(keyCode, event);
 		}
