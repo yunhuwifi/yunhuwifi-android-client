@@ -43,7 +43,7 @@
         <Button
             android:id="@+id/btnNext"
             style="@style/buttonPrimary"
-            android:visibility="gone"
+            android:visibility="visible"
               android:layout_marginLeft="10dp"
               android:layout_marginRight="10dp"
             android:text="获取验证码" />

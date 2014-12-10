@@ -53,14 +53,14 @@
                 android:singleLine="true" />
 
 			<Button
-			    android:id="@+id/backpwd"
+			    android:id="@+id/btnbackpwd"
 			   style="@style/buttonPrimary"
 			    android:layout_below="@+id/captcha"
 			    android:layout_marginTop="26dp"
-			    android:text="找回密码" />
+			    android:text="下一步" />
 
 			<Button
-			    android:id="@+id/txtchange"
+			    android:id="@+id/btncode"
 			    android:layout_width="80dp"
 			    android:layout_height="wrap_content"
 			    android:layout_alignRight="@+id/number"

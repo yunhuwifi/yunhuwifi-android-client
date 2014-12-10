@@ -43,7 +43,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/llyt"
-        android:background="@drawable/bg_speed"
         android:orientation="horizontal"
         android:visibility="gone" >
 
@@ -136,7 +135,7 @@
 			    android:background="@drawable/scaletxtbg"
 			    android:textColor="@color/white"
 			    android:textSize="12sp"
-			    android:visibility="visible" />
+			    android:visibility="gone" />
 
 		<!-- 		<LinearLayout 
 			        android:layout_gravity="left"
@@ -161,7 +160,7 @@
 			        android:layout_height="10dp"
 			        android:progressDrawable="@drawable/scalepbselector"
 			        android:max="100"
-			        android:visibility="visible"
+			        android:visibility="gone"
 			        />
 		<Button
 		        android:id="@+id/start_button"

@@ -20,7 +20,6 @@
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/wifiicon"
             />
 
         <TextView
@@ -30,7 +29,6 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/ivIcon"
             android:layout_marginLeft="20dp"
-            android:text="t"
             android:textColor="@drawable/cancelfontcolor"
             android:textSize="16sp" />
 

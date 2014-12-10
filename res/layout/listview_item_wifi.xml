@@ -8,20 +8,11 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-         android:padding="10dp"
+         android:padding="15dp"
          android:background="@drawable/itembg"
          android:descendantFocusability="blocksDescendants" 
           >
 
-        <ImageView
-            android:id="@+id/ivIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/checkedlist" 
-            android:layout_marginLeft="5dp"
-            />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -29,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/ivIcon"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:text="所连接的WiFi"
             android:focusable="false"
             android:textColor="@drawable/cancelfontcolor"
@@ -44,6 +35,8 @@
             android:background="@drawable/selector_butn_toggle"
             android:checked="true"
             android:focusable="false"
+            android:textOn=""
+            android:textOff=""
             android:layout_marginRight="5dp"
             android:gravity="center" />
 

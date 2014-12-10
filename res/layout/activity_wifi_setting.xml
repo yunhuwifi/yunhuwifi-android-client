@@ -43,6 +43,7 @@
                 android:layout_marginTop="5dp"
                 android:textOn=""
                 android:textOff=""
+                android:checked="true"
                 android:background="@drawable/selector_butn_toggle"
                 />
 
