@@ -19,8 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/ivIcon"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:text="所连接的WiFi"
             android:focusable="false"
             android:textColor="@drawable/cancelfontcolor"
@@ -31,13 +30,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
             android:layout_centerVertical="true"
             android:background="@drawable/selector_butn_toggle"
             android:checked="true"
-            android:focusable="false"
             android:textOn=""
             android:textOff=""
-            android:layout_marginRight="5dp"
+            android:focusable="false"
             android:gravity="center" />
 
     </RelativeLayout>

@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:text="验证码" />
 
-            <EditText
+            <com.yunhuwifi.view.ClearEditText
                 android:id="@+id/captcha"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
