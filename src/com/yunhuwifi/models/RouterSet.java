@@ -9,7 +9,6 @@ import com.yunhuwifi.view.ListViewItem;
 public class RouterSet implements ListViewItem{
 	private String msg;
 	private Bitmap iconRes;
-	private int viewOpreate;
 	
 	@Override
 	public Bitmap getBitmap() {
@@ -52,12 +51,6 @@ public class RouterSet implements ListViewItem{
 	}
 	public void setMsg(String msg) {
 		this.msg = msg;
-	}
-	public int getViewOpreate() {
-		return viewOpreate;
-	}
-	public void setViewOpreate(int viewOpreate) {
-		this.viewOpreate = viewOpreate;
 	}
 	public Bitmap getIconRes() {
 		return iconRes;

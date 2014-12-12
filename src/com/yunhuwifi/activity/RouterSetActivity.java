@@ -56,22 +56,22 @@ public class RouterSetActivity extends HeaderActivity {
 		RouterSet item5=new RouterSet();
 		RouterSet item6=new RouterSet();
 		item1.setMsg("管理密码设置");
-		item1.setViewOpreate(R.drawable.nextbg);
+//		item1.setViewOpreate(R.drawable.nextbg);
 		item1.setIconRes(BitmapFactory.decodeResource(this.getResources(),R.drawable.adminpwdicon));
 		item2.setMsg("无线设置");
-		item2.setViewOpreate(R.drawable.nextbg);
+//		item2.setViewOpreate(R.drawable.nextbg);
 		item2.setIconRes(BitmapFactory.decodeResource(this.getResources(),R.drawable.wifiicon));
 		item3.setMsg("内网设置");
-		item3.setViewOpreate(R.drawable.nextbg);
+//		item3.setViewOpreate(R.drawable.nextbg);
 		item3.setIconRes(BitmapFactory.decodeResource(this.getResources(),R.drawable.lanicon));
 		item4.setMsg("外网设置");
-		item4.setViewOpreate(R.drawable.nextbg);
+//		item4.setViewOpreate(R.drawable.nextbg);
 		item4.setIconRes(BitmapFactory.decodeResource(this.getResources(),R.drawable.wanicon));
 		item5.setMsg("重启路由器");
-		item5.setViewOpreate(R.drawable.nextbg);
+//		item5.setViewOpreate(R.drawable.nextbg);
 		item5.setIconRes(BitmapFactory.decodeResource(this.getResources(),R.drawable.restarticon));
 		item6.setMsg("恢复出厂设 置");
-		item6.setViewOpreate(R.drawable.nextbg);
+//		item6.setViewOpreate(R.drawable.nextbg);
 		item6.setIconRes(BitmapFactory.decodeResource(this.getResources(),R.drawable.renewicon));
 		
 		data.add(item1);

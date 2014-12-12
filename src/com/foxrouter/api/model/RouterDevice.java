@@ -5,8 +5,6 @@ import java.io.Serializable;
 import com.yunhuwifi.view.ListViewItem;
 
 import android.graphics.Bitmap;
-import android.view.View;
-import android.widget.ProgressBar;
 
 public class RouterDevice implements Serializable, ListViewItem {
 

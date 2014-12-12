@@ -131,12 +131,12 @@ public class LoginActivity extends BaseActivity implements Callback,
 	}
 
 	//百度
-	/*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (null != mAuthorization) {
 			mAuthorization.onActivityResult(requestCode, resultCode, data);
 		}
-	}*/
+	}
 
 	protected void saveLogin(User user) {
 		User localUser = DbUtility.find(getApplicationContext(), User.class);

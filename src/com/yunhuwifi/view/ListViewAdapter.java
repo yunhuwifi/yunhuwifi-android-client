@@ -13,7 +13,6 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.ToggleButton;
 import android.widget.Button;
 import android.widget.TextView;
@@ -99,10 +98,12 @@ public class ListViewAdapter extends BaseAdapter {
 				if(item.getBitmap()!=null){
 					holder.titleView.setText(item.getTitle());
 					holder.bitmapView.setImageBitmap(item.getBitmap());
-					if(position==selectedPosition){
-						holder.operationview.setVisibility(View.VISIBLE);
-					}else{
-						holder.operationview.setVisibility(View.GONE);
+					if(holder.operationview instanceof Button){
+							if(position==selectedPosition){
+								holder.operationview.setVisibility(View.VISIBLE);
+							}else{
+								holder.operationview.setVisibility(View.GONE);
+							}
 					}
 				}else{
 					holder.titleView.setText(item.getTitle());//移除

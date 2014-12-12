@@ -30,7 +30,7 @@ public class CustomDialog {
 
 		Dialog loadingDialog = new Dialog(context, R.style.customDialog);// 创建自定义样式dialog
 
-		loadingDialog.setCancelable(false);// 不可以用“返回键”取消
+		loadingDialog.setCancelable(true);// 可以用“返回键”取消
 		loadingDialog.setContentView(layout, new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.FILL_PARENT,
 				LinearLayout.LayoutParams.FILL_PARENT));// 设置布局

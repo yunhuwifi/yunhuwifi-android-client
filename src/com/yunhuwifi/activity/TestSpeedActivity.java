@@ -222,7 +222,7 @@ public class TestSpeedActivity extends BaseActivity {
 //				tvpbtxt.setAnimation(animation);
 				
 				LinearLayout.LayoutParams pa=(LinearLayout.LayoutParams) tvpbtxt.getLayoutParams();
-				pa.setMargins(x+pg,0,0,0);
+				pa.setMargins(x+pg+5,0,0,0);
 				tvpbtxt.setLayoutParams(pa);
 				tvpbtxt.setVisibility(View.VISIBLE);
 				horizontalPB.setVisibility(View.VISIBLE);
@@ -230,7 +230,7 @@ public class TestSpeedActivity extends BaseActivity {
 				startButton.setText("重新检测");
 				showToast("检测完成", Toast.LENGTH_SHORT);
 //				tvpbtxt.setText(df.format(speedMax/1024/128)+"\n"+"Mb/s"+"\n"+x+"\n"+y+"\n"+t+"\n"+b+"\n"+sx+"\n"+sy);
-				tvpbtxt.setText(df.format(speedMax/1024/128)+"Mb/s");
+				tvpbtxt.setText(df.format(speedMax/1024/128)+"Mb/s"+"\n"+x+"\n"+pg);
 				break;
 			default:
 				break;
