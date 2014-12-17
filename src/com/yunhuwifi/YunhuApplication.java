@@ -17,11 +17,11 @@ public class YunhuApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		// 自动更新
+		UmengUpdateAgent.setDeltaUpdate(false);
 		UmengUpdateAgent.setAppkey(AppKey.umengAPPKEY);
 		UmengUpdateAgent.setChannel(null);
 		UmengUpdateAgent.setDefault();
 		UmengUpdateAgent.update(this, AppKey.umengAPPKEY, "");
-		UmengUpdateAgent.setDeltaUpdate(false);
 		// 初始化短信服务
 		SMSSDK.initSDK(this, AppKey.captchaAPPKEY, AppKey.captchaAPPSECRET);
 		

@@ -6,6 +6,8 @@ import org.apache.http.HttpEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.protocol.HTTP;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.yunhuwifi.RouterContext;
 import com.yunhuwifi.handlers.JsonCallBack;
@@ -44,7 +46,7 @@ public abstract class RouterModule {
 			url += "?auth=" + routerContext.getToken();
 		}
 
-		String json = new Gson().toJson(request);
+		String json = request.toJSONString();
 		HttpEntity entity = null;
 		try {
 			entity = new StringEntity(json, HTTP.UTF_8);
