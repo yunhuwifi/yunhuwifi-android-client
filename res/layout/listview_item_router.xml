@@ -17,16 +17,15 @@
         android:scaleType="fitXY"
         android:src="@drawable/abstracticon" />
 
-    <Button
+    <ImageView
         android:id="@+id/viewOperate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="5dp"
-        android:scaleType="fitXY"
-        android:visibility="gone"
-        android:background="@drawable/checkedlist"
+        android:visibility="visible"
+        android:src="@drawable/checkedlist"
          />
 
     <TextView

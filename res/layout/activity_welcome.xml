@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/iv"
             android:layout_centerVertical="true"
-            android:text="云狐路由器"
+            android:text="云狐立方"
             android:textColor="@color/white"
             android:textSize="25sp" />
 

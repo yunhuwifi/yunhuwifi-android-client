@@ -95,8 +95,8 @@
 			        android:orientation="horizontal"
 			        android:visibility="gone"
 			 		    >
-			 		        <RadioButton 
-			 		    		android:id="@+id/radiobtnall"
+			 		        <CheckBox 
+			 		    		android:id="@+id/cball"
 			 		            android:paddingTop="5dp"
 						        android:layout_weight="1"
 			 		            style="@style/mainoperate"
